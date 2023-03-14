@@ -1,0 +1,27 @@
+#kucsmah1 {
+    font-family: 'Climate Crisis', cursive;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Righteous', cursive;
+    border-radius: 10px;
+    color: rgb(113, 191, 255);
+    margin: auto;
+    width: 20%;
+    border: 6px solid rgb(255, 220, 156);
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(255, 220, 156);
+    font-size: 40px;
+    letter-spacing: 1.5px;
+}
+body {
+    background-image: url("asd1234.webp");
+    background-color: #cccccc;
+    background-size: auto;
+}
+#kucsmah2 {
+    font-family: 'Climate Crisis', cursive;
+    font-family: 'Comfortaa', cursive;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
