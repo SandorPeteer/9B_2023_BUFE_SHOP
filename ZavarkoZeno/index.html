@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ételek</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="fejlec">
+            <h1>Meleg ételek</h1>
+            <h3>&mdash; MENÜ &mdash; </h3>
+        </div>
+        <div class="etelek">
+            <img src="sajtburger.png">
+            <div class="dekor">
+                <div class="dekor-sub">
+                    <h5>Sajtburger</h5>
+                    <h5 class="price"> 650Ft </h5>
+                </div>
+            </div>
+            <button onclick="message()" class="button">Kosárba</button>
+        </div>
+
+        <div class="etelek">
+            <img src="hotdog.png">
+            <div class="dekor">
+                <div class="dekor-sub">
+                    <h5>Hot dog</h5>
+                    <h5 class="price"> 450Ft </h5>
+                </div>
+            </div>
+            <button onclick="message()" class="button">Kosárba</button>
+        </div>
+
+        <div class="etelek">
+            <img src="francia-piritos.png">
+            <div class="dekor">
+                <div class="dekor-sub">
+                    <h5>Francia pirítós</h5>
+                    <h5 class="price"> 450Ft </h5>
+                </div>
+            </div>
+            <button onclick="message()" class="button">Kosárba</button>
+        </div>
+
+        <div class="etelek">
+            <img src="Mini-Pizza.png">
+            <div class="dekor">
+                <div class="dekor-sub">
+                    <h5>Mini pizza</h5>
+                    <h5 class="price"> 700Ft </h5>
+                </div>
+            </div>
+            <button onclick="message()" class="button">Kosárba</button>
+        </div>
+
+        <div class="etelek">
+            <img src="rantotthus.png">
+            <div class="dekor">
+                <div class="dekor-sub">
+                    <h5>Rántott szelet</h5>
+                    <h5 class="price"> 500Ft </h5>
+                </div>
+            </div>  
+            <button onclick="message()" class="button">Kosárba</button>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    function message(){
+        alert('Az étel hozzá lett adva a kosárhoz!');
+    }
+</script>
+</html>
