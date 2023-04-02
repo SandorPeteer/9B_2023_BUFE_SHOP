@@ -21,6 +21,48 @@
         object-fit: cover;
     }
 </style>
+        <style>
+        .card {
+            box-shadow: 1px 1px 4px skyblue;
+            transition: all 0.2s ease-out;
+            overflow: hidden;
+        }
+        
+        .card img {
+            min-height: 30vh;
+            max-height: 30vh;
+            transition: all 0.2s ease-out;
+            object-fit: cover;
+        }
+        
+        .card:hover {
+            box-shadow: 0 0 4px red;
+        }
+        
+        .card:hover img {
+            scale: 1.05;
+        }
+        
+        .card-body {
+            background-color: rgb(255, 252, 250);
+            box-shadow: 0 0 1px black;
+            z-index: 1;
+        }
+        
+        .ar {
+            background-color: rgba(240, 141, 21, 0.1);
+            color: brown;
+        }
+        
+        @media (max-width: 768px) {
+            .input-group {
+                margin-top: 0px;
+            }
+            .icon {
+                margin-top: -130px;
+            }
+        }
+    </style>
 
 <body>
 
@@ -97,8 +139,8 @@
                     src="https://github.com/SandorPeteer/9B_2023_BUFE_SHOP/img/ital/hideg/xixofeketeribizli.jpg"
                     alt="xixo ">
                 <div class="card-body">
-                    <h5 class="card-title"> </h5>
-                    <p class="card-text">Finom friss meleg francia pirítós.</p>
+                    <h5 class="card-title"> feketeribizlis xixo </h5>
+                    <p class="card-text">fogyasztása hüsitve ajánlot </p>
                     <p>250 Ft</p>
                     <a href="#" class="btn btn-primary">Vásárlás</a>
                 </div>
