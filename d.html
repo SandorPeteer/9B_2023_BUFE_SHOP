@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Büfé webshop</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .card {
+            box-shadow: 1px 1px 4px skyblue;
+            transition: all 0.2s ease-out;
+            overflow: hidden;
+        }
+        
+        .card img {
+            min-height: 30vh;
+            max-height: 30vh;
+            transition: all 0.2s ease-out;
+            object-fit: cover;
+        }
+        
+        .card:hover {
+            box-shadow: 0 0 4px red;
+        }
+        
+        .card:hover img {
+            scale: 1.05;
+        }
+        
+        .card-body {
+            background-color: rgb(255, 252, 250);
+            box-shadow: 0 0 1px black;
+            z-index: 1;
+        }
+        
+        .ar {
+            background-color: rgba(240, 141, 21, 0.1);
+            color: brown;
+        }
+        
+        @media (max-width: 768px) {
+            .input-group {
+                margin-top: 0px;
+            }
+            .icon {
+                margin-top: -130px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- FEJLÉC -->
+
+    <header class="bg-light">
+        <div class="container">
+            <div class="row align-items-center py-3">
+                <div class="col-md-4 text-center">
+                    <a class="link-offset-2 link-underline link-underline-opacity-0" href="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/index.html">
+                        <h1 class="text-primary">9B BÜFÉ</h1>
+                    </a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <form>
+                        <div class="input-group">
+                            <input type="text" id="search-input" class="form-control" placeholder="Keresés...">
+                            <button type="button" id="search-button" class="btn btn-outline-primary">Keresés</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-4 icon">
+                    <div class="row">
+                        <div class="col text-start">
+                            <a href="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/kosar.html">
+                                <i class="fa fa-cart-shopping fa-2x"></i>
+                            </a>
+                        </div>
+                        <div class="col text-end">
+                            <a href="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/bejelentkezes.html">
+                                <i class="fa fa-user fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-5">
+
+        <!-- TERMÉKEK 1. csoport -->
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2 class="mb-4">MELEG ÉTELEK</h2>
+            </div>
+        </div>
+
+        <div class="row" id="product-list">
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/rantotthus.jfif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">RÁNTOTT HÚS</h5>
+                        <p class="card-text">Frissen, ropogósan sütve, pontosan ahogy szereted!</p>
+                        <p class="ar text-center">220 Ft</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/dupla.jfif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">DUPLA HAMBI</h5>
+                        <p class="card-text">Dupla marhahúsos szezámmagos bundában.</p>
+                        <p class="ar text-center">650 Ft</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/hamburger.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">SIMA HAMBI</h5>
+                        <p class="card-text">Marhahúsos hamburger, uborkával és hagymával töltve.</p>
+                        <p class="ar text-center">400 Ft</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/hamburger2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">SAJTOS HAMBI</h5>
+                        <p class="card-text">Sajtos hamburger, alul felül sütve, sajtozva.</p>
+                        <p class="ar text-center">450 Ft</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- TERMÉKEK 2. csoport -->
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2 class="mb-4">SZENDVICSEK</h2>
+            </div>
+        </div>
+
+        <div class="row" id="product-list">
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/hideg/csike_szendvics.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">CSIRKÉS SZENDVICS</h5>
+                        <p class="card-text">Frissen, hidegen, ez is pontosan ahogy szereted!</p>
+                        <p class="ar text-center">220 Ft</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/hideg/szendvics.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">VEGA SZENDVICS</h5>
+                        <p class="card-text">Sok zöldséggel, és sajttal, salátával szervírozva.</p>
+                        <p class="ar text-center">650 Ft</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/hideg/tojas.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">TOJÁS KARIKÁK</h5>
+                        <p class="card-text">Főtt tojás hűtve, házi töltelékkel, meg kell kóstolni.</p>
+                        <p class="ar text-center">400 Ft</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/hideg/vajas kenyer.jfif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">VAJAS KENYÉR</h5>
+                        <p class="card-text">Egy nagy szelet kenyér, jól megvajazva, hogy ne éhezz!</p>
+                        <p class="ar text-center">450 Ft</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+         <!-- EGYÉBB csoport -->
+        
+         <div class="row">
+            <div class="col-md-12 text-center">
+                <h2 class="mb-4">Egyébb</h2>
+            </div>
+        </div>
+
+        <div class="row" id="product-list">
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/cukor.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Cukor</h5>
+                        <p class="card-text">Kristály cukor 2g</p>
+                        <p class="ar text-center">20 Ft</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/so.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Só</h5>
+                        <p class="card-text">Tengeri só 2g</p>
+                        <p class="ar text-center">20 Ft</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/szivoszal.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Szívószál</h5>
+                        <p class="card-text">Papír szívoszál</p>
+                        <p class="ar text-center">10 Ft</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/szalveta.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Szalvéta</h5>
+                        <p class="card-text">1db sima szalvéta</p>
+                        <p class="ar text-center">Ingyen</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/pohar.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pohár</h5>
+                        <p class="card-text">Papír pohár 2dl</p>
+                        <p class="ar text-center">20 Ft</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/melegites.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Melegítés</h5>
+                        <p class="card-text">Mikrós vagy melegszendvics sűtős melegítés</p>
+                        <p class="ar text-center">100 Ft</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/kanal.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Kanál</h5>
+                        <p class="card-text">Műanyag kanál</p>
+                        <p class="ar text-center">10 Ft</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/villa.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Villa</h5>
+                        <p class="card-text">Műanyag villa</p>
+                        <p class="ar text-center">10 Ft</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/kes.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Kés</h5>
+                        <p class="card-text">Műanyag kés</p>
+                        <p class="ar text-center">10 Ft</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- LÁB rész -->
+
+
+    <footer class="bg-dark bg-opacity-75 text-white py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/logo/logo1.png" alt="logo" style="width: 20vh;">
+                </div>
+
+                <div class="col-md-7">
+                    <h4>Általános Szerződési Feltételek</h4>
+                    <ul>
+                        <li>A rendelés visszaigazolását követően a kiszállítás várható időpontja 3-5 perc.</li>
+                        <li>Az árak tartalmazzák az ÁFA-t, de nem tartalmazzák a szállítási díjat, ami a megrendelés összegétől függ.</li>
+                    </ul>
+                    
+             <ul class="col-md-7">
+                        <h4>Rólunk</h4>
+                         <li>A weboldalt készítette, és finanszírozta a Miskolci SZC Kandó Kálmán Informatikai Technikum 9.B osztály 2. csoportja!</li>
+             </ul>    
+                    
+                </div>
+                <div class="col-md-3">
+                    <h4>Kapcsolat</h4>
+                    <p>Cím: 1234 Miskolc, Példa utca 1.</p>
+                    <p>Telefon: +36 70 234 5678</p>
+                    <p>E-mail: info@peldabufe.hu</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Termék keresés
+        var searchInput = document.querySelector('#search-input');
+        var searchButton = document.querySelector('#search-button');
+        var productCards = document.querySelectorAll('.card');
+
+        searchInput.addEventListener('input', function() {
+            var searchTerm = searchInput.value.trim().toLowerCase();
+            productCards.forEach(function(card) {
+                var title = card.querySelector('.card-title').textContent.trim().toLowerCase();
+                var description = card.querySelector('.card-text').textContent.trim().toLowerCase();
+                if (title.indexOf(searchTerm) !== -1 || description.indexOf(searchTerm) !== -1) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        searchButton.addEventListener('click', function() {
+            searchInput.value = '';
+            productCards.forEach(function(card) {
+                card.style.display = 'block';
+            });
+        });
+    </script>
+
+
+    <!-- JavaScript links -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
