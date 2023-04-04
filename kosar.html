@@ -1,14 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>KOSÁR</title>
+    <style>
+        button {
+            width: 200px;
+            height: 200px;
+        }
+        .mod{
+            transition: all 0.2s ease-out;
+        }
+        .mod:hover{
+            background-color: darkblue;
+            color: aliceblue;
+        }
+    </style>
 </head>
-<body>
-    
 
+<body onload="aktualis_ar(), kosar_frissit()">
+
+    <button onclick="kosarba('alma',prompt('Mennyit kérsz?')), kosar_frissit()">
+        Alma <p id="alma_">ÁR</p>
+    </button>
+
+    <button onclick="kosarba('korte',prompt('Mennyit kérsz?')), kosar_frissit()">
+        Körte <p id="korte_">ÁR</p>
+    </button>
+
+    <button onclick="kosarba('citrom',prompt('Mennyit kérsz?')), kosar_frissit()">
+        Citrom <p id="citrom_">ÁR</p>
+    </button>
+
+    <br>
+    <hr>
+    <table border="1" id="kosar"></table>
+    <input type="button" value="TÖRLÉS" onclick="localStorage.clear(), kosar_frissit()">
+    <hr>
+
+    <script>
+        var alma = 1650;
+        var korte = 2000;
+        var citrom = 330;
+
+        function aktualis_ar() {
+            document.getElementById('alma_').innerHTML = alma + " Ft";
+            document.getElementById('korte_').innerHTML = korte + " Ft";
+            document.getElementById('citrom_').innerHTML = citrom + " Ft";
+        }
+
+        function kosarba(termek, darab) {
+            localStorage.setItem(termek, darab);
+        }
+
+        function kosar_frissit() {
+            let tablazat = "<tr><th style='margin:auto'>Termék neve: </th><th>darabszáma: </th><th>Ára: </th></tr>"
+
+            let ossz = 0;
+            let darab = 0;
+            let key = "";
+
+
+            for (let i = 0; i <= localStorage.length - 1; i++) {
+                key = localStorage.key(i);
+                darab = parseInt(localStorage.getItem(key));
+                tablazat += "<tr><td>" + key + "</td>" + "<td class='mod' onclick=\"localStorage.setItem('" + key +
+                    "',prompt('Mennyi legyen?')), kosar_frissit()\">" + darab + "</td><td>" + (window[key] * darab) + " Ft" +
+                    "</td></tr>";
+                ossz += window[key] * darab;
+            }
+
+            tablazat += "<tr> <th>VÉGÖSSZEG: </th> <th> </th> <th>" + ossz + " Ft" + "</th></tr>"
+
+
+
+            document.getElementById('kosar').innerHTML = tablazat
+        }
+    </script>
 </body>
-</html>
 
+</html>
