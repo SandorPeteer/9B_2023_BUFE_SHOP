@@ -98,6 +98,20 @@
             cursor: pointer;
         }
 
+        table {
+            border-collapse: separate;
+            border-spacing: 10px;
+        }
+
+        #kosar {
+            text-align: center;
+            background-color: white;
+            border-radius: 5px;
+            border: 1px solid grey;
+            margin-bottom: 5px;
+            margin-top: 8vh;
+        }
+
         tr {
             height: 30px;
         }
@@ -106,10 +120,7 @@
             width: 100px;
             text-align: center;
             border: 1px solid darkgrey;
-        }
-
-        #kosar {
-            border: 2px solid rgb(134, 89, 20);
+            border-radius: 5px;
         }
 
         .xxx:hover {
@@ -136,13 +147,17 @@
 
             <div class="row g-5">
                 <div class="col-md-5 col-lg-4 order-md-last">
+
                     <table id="kosar"></table>
+
                     <form class="card p-2">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Promo code">
                             <button type="submit" class="btn btn-secondary">Redeem</button>
                         </div>
                     </form>
+                    <br>
+                    <button class="btn btn-primary" onclick="window.open('https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/', '_self')">Vissza</button>
                 </div>
                 <div class="col-md-7 col-lg-8">
                     <h4 class="mb-3">Billing address</h4>
@@ -317,24 +332,11 @@
         </footer>
     </div>
 
+    <script src="script.js"></script>
 
     <script>
-        var Alma = 1650;
-        var Körte = 2000;
-        var Citrom = 330;
-
-        function aktualis_ar() {
-            document.getElementById('alma_').innerHTML = Alma + " Ft";
-            document.getElementById('korte_').innerHTML = Körte + " Ft";
-            document.getElementById('citrom_').innerHTML = Citrom + " Ft";
-        }
-
-        function kosarba(termek, darab) {
-            localStorage.setItem(termek, darab);
-        }
-
         function kosar_frissit() {
-            let tablazat = "<tr><th style='margin:auto'> Termék: </th><th> darab: </th><th> Ára: </th><th> Mégsem: </th></tr>"
+            let tablazat = "<tr><th style='margin:auto'> Termék: </th><th> darab: </th><th> Ára: </th><th> Töröl </th></tr>"
             let ossz = 0;
             let darab = 0;
             let key = "";
@@ -346,7 +348,7 @@
                     "</td><td class='xxx' onclick='localStorage.removeItem(\"" + key + "\"), kosar_frissit()'> X </td></tr>";
                 ossz += window[key] * darab;
             }
-            tablazat += "<tr><th></th> <th>VÉGÖSSZEG: </th> <th>" + ossz + " Ft" + "</th> <th></th></tr>"
+            tablazat += "<tr><th></th> <th>ÖSSZEG: </th> <th>" + ossz + " Ft" + "</th> <th></th></tr>"
             document.getElementById('kosar').innerHTML = tablazat;
         }
     </script>
