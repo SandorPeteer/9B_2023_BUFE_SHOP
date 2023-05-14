@@ -52,6 +52,10 @@
                 margin-top: -130px;
             }
         }
+
+        .etel{
+            color: rgb(255, 0, 0);
+        }
     </style>
 </head>
 
@@ -77,13 +81,13 @@
                 <!-- Left links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ÉTEL</a>
+                        <a class="nav-link" href="#hamburgerek">HAMBURGEREK</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ITAL</a>
+                        <a class="nav-link" href="#hotdokok">HOTDOGOK</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">EGYÉB</a>
+                        <a class="nav-link" href="#szendvicsek">SZENDVICSEK</a>
                     </li>
                 </ul>
                 <!-- Left links -->
@@ -105,10 +109,10 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
                         <li>
-                            <a class="dropdown-item" href="kosar.html">Kosárhoz ugrás</a>
+                            <a class="dropdown-item" href="fizet.html">Kosárhoz ugrás</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">Fizetés</a>
+                            <a class="dropdown-item" href="fizet.html">Fizetés</a>
                         </li>
                     </ul>
                 </div>
@@ -123,12 +127,11 @@
                         <li>
                             <a class="dropdown-item" href="#">Profilom</a>
                         </li>
+                        
                         <li>
-                            <a class="dropdown-item" href="#">Beállítások</a>
+                            <a class="dropdown-item" href="bejelentkezes.html">Bejelentkezés/Regisztrálás</a>
                         </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Kijelentkezés</a>
-                        </li>
+                        
                     </ul>
                 </div>
             </div>
@@ -149,27 +152,33 @@
             </div>
         </div>
 
-        <!-- Rántotthús Kártya -->
+        <div class="row etel">
+            <div class="col-md-12 text-center">
+                <h2 id="hamburgerek" class="mb-4">HAMBURGEREK</h2>
+            </div>
+        </div>
+
+        <!-- Sajtburger Kártya -->
         <div class="row" id="product-list1">
             <div class="col-md-3 mb-4">
                 <div class="card" data-bs-toggle="modal" data-bs-target="#t001"
-                    onclick="rantotthusi.value = Number(Rántotthús) * Number(db1.value)">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/rantotthus.webp"
+                    onclick="sajtburger.value = Number(Sajtburger) * Number(db1.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/Sajtburger.jpeg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">RÁNTOTT HÚS</h5>
+                        <h5 class="card-title">Sajtburger</h5>
                         <p class="card-text">Frissen, ropogósan sütve, pontosan ahogy szereted!</p>
-                        <p class="ar text-center" id="rantotthusi_">ÁR Ft</p>
+                        <p class="ar text-center" id="sajtburger_">ÁR Ft</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Rántotthús Modal -->
+            <!-- Sajtburger Modal -->
             <div class="modal fade" id="t001" tabindex="-1" aria-labelledby="t001Label" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="t001Label">Rántott hús</h1>
+                            <h1 class="modal-title fs-5" id="t001Label">Sajtburger</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -185,42 +194,42 @@
                                     <hr>
                                     <label for="db1">darab</label>
                                     <input type="number" name="fel" id="db1" min="1" max="3" value="1"
-                                        onchange="rantotthusi.value = Number(Rántotthús) * Number(db1.value)">
+                                        onchange="sajtburger.value = Number(Sajtburger) * Number(db1.value)">
                                     <hr>
                                     <input style="background-color: aliceblue; width: 50px; text-align: center;"
-                                        type="text" id="rantotthusi">
-                                    <label for="rantotthusi"> Ft</label>
+                                        type="text" id="sajtburger">
+                                    <label for="sajtburger"> Ft</label>
                                 </fieldset>
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                                onclick="kosarba('Rántotthús',db1.value)">HOZZÁADÁS</button>
+                                onclick="kosarba('Sajtburger',db1.value)">HOZZÁADÁS</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!--Duplahambi Káryta -->
+            <!--Cheddar burger Káryta -->
             <div class="col-md-3 mb-4">
                 <div class="card" data-bs-toggle="modal" data-bs-target="#t002"
-                    onclick="duplahambi.value = Number(DuplaHamburger) * Number(db2.value)">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/bigmac.png"
+                    onclick="cheddar.value = Number(Cheddar) * Number(db2.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/Cheddar burger.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">DUPLA HAMBI</h5>
+                        <h5 class="card-title">Cheddar burger</h5>
                         <p class="card-text">Dupla marhahúsos szezámmagos bundában.</p>
-                        <p class="ar text-center" id="duplahambi_">ÁR Ft</p>
+                        <p class="ar text-center" id="cheddar_">ÁR Ft</p>
                     </div>
                 </div>
             </div>
 
-            <!--Duplahambi Modal -->
+            <!--Cheddar burger Modal -->
             <div class="modal fade" id="t002" tabindex="-1" aria-labelledby="t002Label" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="t002Label">Dupla Hamburger</h1>
+                            <h1 class="modal-title fs-5" id="t002Label">Cheddar burger</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -236,17 +245,178 @@
                                     <hr>
                                     <label for="db2">darab</label>
                                     <input type="number" id="db2" name="fel" min="1" max="3" value="1"
-                                        onchange="duplahambi.value = Number(DuplaHamburger) * Number(db2.value)">
+                                        onchange="cheddar.value = Number(Cheddar) * Number(db2.value)">
                                     <hr>
                                     <input style="background-color: aliceblue; width: 50px; text-align: center;"
-                                        type="text" id="duplahambi">
-                                    <label for="duplahambi"> Ft</label>
+                                        type="text" id="cheddar">
+                                    <label for="cheddar"> Ft</label>
                                 </fieldset>
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                                onclick="kosarba('DuplaHamburger',db2.value)">HOZZÁADÁS</button>
+                                onclick="kosarba('Cheddar',db2.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--BBQ hamburger Káryta -->
+            <div class="col-md-3 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#t003"
+                    onclick="bbqhamburger.value = Number(Bbqhamburger) * Number(db3.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/BBQ hamburger.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">BBQ hamburger</h5>
+                        <p class="card-text">Marhahúsos hamburger, uborkával és hagymával töltve.</p>
+                        <p class="ar text-center" id="bbqhamburger_">Ár Ft</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--BBQ hamburger Modal -->
+            <div class="modal fade" id="t003" tabindex="-1" aria-labelledby="t003Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="t003Label">BBQ hamburger</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <legend>feltétek:</legend>
+                                    <input type="checkbox" name="fel" id="Duplahambi_ketchup">
+                                    <label for="Duplahambi_ketchup">ketchup</label> <br>
+                                    <input type="checkbox" name="fel" id="Duplahambi_mustar">
+                                    <label for="Duplahambi_mustar">mustár</label> <br>
+                                    <input type="checkbox" name="fel" id="Duplahambi_majonez">
+                                    <label for="Duplahambi_majonez">majonéz</label> <br>
+                                    <hr>
+                                    <label for="db3">darab</label>
+                                    <input type="number" id="db3" name="fel" min="1" max="3" value="1"
+                                        onchange="bbqhamburger.value = Number(Bbqhamburger) * Number(db3.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="bbqhamburger">
+                                    <label for="bbqhamburger"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('Bbqhamburger',db3.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Olaszos burger Káryta -->
+            <div class="col-md-3 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#t004"
+                    onclick="olaszoshamburger.value = Number(Olaszoshamburger) * Number(db4.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/olaszosburger.webp"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Olaszos hamburger</h5>
+                        <p class="card-text">Sajtos hamburger, alul felül sütve, sajtozva.</p>
+                        <p class="ar text-center" id="olaszoshamburger_">Ár Ft</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Olaszos burger Modal -->
+            <div class="modal fade" id="t004" tabindex="-1" aria-labelledby="t004Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="t004Label">Olaszos hamburger</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <legend>feltétek:</legend>
+                                    <input type="checkbox" name="fel" id="Duplahambi_ketchup">
+                                    <label for="Duplahambi_ketchup">ketchup</label> <br>
+                                    <input type="checkbox" name="fel" id="Duplahambi_mustar">
+                                    <label for="Duplahambi_mustar">mustár</label> <br>
+                                    <input type="checkbox" name="fel" id="Duplahambi_majonez">
+                                    <label for="Duplahambi_majonez">majonéz</label> <br>
+                                    <hr>
+                                    <label for="db4">darab</label>
+                                    <input type="number" id="db4" name="fel" min="1" max="3" value="1"
+                                        onchange="olaszoshamburger.value = Number(Olaszoshamburger) * Number(db4.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="olaszoshamburger">
+                                    <label for="olaszoshamburger"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('Olaszoshamburger',db4.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row etel">
+                <div class="col-md-12 text-center">
+                    <h2 id="hotdogok" class="mb-4">HOTDOGOK</h2>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#t005"
+                    onclick="lyonihotdog.value = Number(Lyonihotdog) * Number(db5.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/Lyoni hot dog.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Lyoni hot dog</h5>
+                        <p class="card-text">Paradicsomos leves,melegen keszítve.</p>
+                        <p class="ar text-center" id="lyonihotdog_">Ár Ft</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Lyoni hot dog Modal -->
+            <div class="modal fade" id="t005" tabindex="-1" aria-labelledby="t005Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="t005Label">Lyoni hot dog</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <legend>feltétek:</legend>
+                                    <input type="checkbox" name="fel" id="Duplahambi_ketchup">
+                                    <label for="Duplahambi_ketchup">ketchup</label> <br>
+                                    <input type="checkbox" name="fel" id="Duplahambi_mustar">
+                                    <label for="Duplahambi_mustar">mustár</label> <br>
+                                    <input type="checkbox" name="fel" id="Duplahambi_majonez">
+                                    <label for="Duplahambi_majonez">majonéz</label> <br>
+                                    <input type="checkbox" name="fel" id="Duplahambi_ketchup">
+                                    <label for="Duplahambi_ketchup">Sajt</label> <br>
+                                    <hr>
+                                    <label for="db5">darab</label>
+                                    <input type="number" id="db5" name="fel" min="1" max="3" value="1"
+                                        onchange="lyonihotdog.value = Number(Lyoinihotdog) * Number(db5.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="lyonihotdog">
+                                    <label for="lyonihotdog"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('lyonihotdog',db5.value)">HOZZÁADÁS</button>
                         </div>
                     </div>
                 </div>
@@ -254,129 +424,380 @@
 
 
             <div class="col-md-3 mb-4">
-                <div class="card">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/hamburger.jpg"
+                <div class="card"  data-bs-toggle="modal" data-bs-target="#t006"
+                    onclick="newyorkhotdog.value = Number(Newyorkhotdog) * Number(db6.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/New York hot dog.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">SIMA HAMBI</h5>
-                        <p class="card-text">Marhahúsos hamburger, uborkával és hagymával töltve.</p>
-                        <p class="ar text-center">400 Ft</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/hamburger2.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">SAJTOS HAMBI</h5>
-                        <p class="card-text">Sajtos hamburger, alul felül sütve, sajtozva.</p>
-                        <p class="ar text-center">450 Ft</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/para.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Paradicsom leves</h5>
-                        <p class="card-text">Paradicsomos leves,melegen keszítve.</p>
-                        <p class="ar text-center">620 Ft</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/babg.avif"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Babgulyás</h5>
+                        <h5 class="card-title">New York hot dog</h5>
                         <p class="card-text">Bográcsban főzött meleg finom étel</p>
-                        <p class="ar text-center">700 Ft</p>
+                        <p class="ar text-center" id="newyorkhotdog_">Ár Ft</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-3 mb-4">
-                <div class="card">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/francia piritós.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">FRANCIA PIRÍTÓS</h5>
-                        <p class="card-text">Francia pirítós, melegszendvics.</p>
-                        <p class="ar text-center">500 Ft</p>
+            <!--Olaszos burger Modal -->
+            <div class="modal fade" id="t006" tabindex="-1" aria-labelledby="t006Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="t006Label">New York hot dog</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <legend>feltétek:</legend>
+                                    <input type="checkbox" name="fel" id="Duplahambi_ketchup">
+                                    <label for="Duplahambi_ketchup">ketchup</label> <br>
+                                    <input type="checkbox" name="fel" id="Duplahambi_mustar">
+                                    <label for="Duplahambi_mustar">mustár</label> <br>
+                                    <input type="checkbox" name="fel" id="Duplahambi_majonez">
+                                    <label for="Duplahambi_majonez">majonéz</label> <br>
+                                    <input type="checkbox" name="fel" id="Duplahambi_ketchup">
+                                    <label for="Duplahambi_ketchup">Sajt</label> <br>
+                                    <hr>
+                                    <label for="db6">darab</label>
+                                    <input type="number" id="db6" name="fel" min="1" max="3" value="1"
+                                        onchange="newyorkhotdog.value = Number(Newyorkhotdog) * Number(db6.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="newyorkhotdog">
+                                    <label for="newyorkhotdog"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('Newyorkhotdog',db6.value)">HOZZÁADÁS</button>
+                        </div>
                     </div>
                 </div>
             </div>
+
+
             <div class="col-md-3 mb-4">
-                <div class="card">
+                <div class="card"  data-bs-toggle="modal" data-bs-target="#t007"
+                    onclick="amerikaihotdog.value = Number(Amerikaihotdog) * Number(db7.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/Amerikai hot dog.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Amerikai hot dog</h5>
+                        <p class="card-text">Francia pirítós, melegszendvics.</p>
+                        <p class="ar text-center" id="amerikaihotdog_">Ár Ft</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Olaszos burger Modal -->
+            <div class="modal fade" id="t007" tabindex="-1" aria-labelledby="t007Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="t007Label">Amerikai hot dog</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <legend>feltétek:</legend>
+                                    <input type="checkbox" name="fel" id="Duplahambi_ketchup">
+                                    <label for="Duplahambi_ketchup">ketchup</label> <br>
+                                    <input type="checkbox" name="fel" id="Duplahambi_mustar">
+                                    <label for="Duplahambi_mustar">mustár</label> <br>
+                                    <input type="checkbox" name="fel" id="Duplahambi_majonez">
+                                    <label for="Duplahambi_majonez">majonéz</label> <br>
+                                    <input type="checkbox" name="fel" id="Duplahambi_ketchup">
+                                    <label for="Duplahambi_ketchup">Sajt</label> <br>
+                                    <hr>
+                                    <label for="db7">darab</label>
+                                    <input type="number" id="db7" name="fel" min="1" max="3" value="1"
+                                        onchange="amerikaihotdog.value = Number(Amerikaihotdog) * Number(db7.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="amerikaihotdog">
+                                    <label for="amerikaihotdog"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('Amerikaihotdog',db7.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#t008"
+                    onclick="simahotdog.value = Number(Simahotdog) * Number(db8.value)">
                     <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/hotdog.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">HOTDOG</h5>
+                        <h5 class="card-title">Sima hot dog</h5>
                         <p class="card-text">Hotdog füsti, virsli kiflibe rakva.</p>
-                        <p class="ar text-center">400 Ft</p>
+                        <p class="ar text-center" id="simahotdog_">Ár Ft</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Olaszos burger Modal -->
+        <div class="modal fade" id="t008" tabindex="-1" aria-labelledby="t008Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="t008Label">SIma hot dog</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="javascript:void(0)">
+                            <fieldset>
+                                <legend>feltétek:</legend>
+                                <input type="checkbox" name="fel" id="Duplahambi_ketchup">
+                                <label for="Duplahambi_ketchup">ketchup</label> <br>
+                                <input type="checkbox" name="fel" id="Duplahambi_mustar">
+                                <label for="Duplahambi_mustar">mustár</label> <br>
+                                <input type="checkbox" name="fel" id="Duplahambi_majonez">
+                                <label for="Duplahambi_majonez">majonéz</label> <br>
+                                <input type="checkbox" name="fel" id="Duplahambi_ketchup">
+                                <label for="Duplahambi_ketchup">Sajt</label> <br>
+                                <hr>
+                                <label for="db8">darab</label>
+                                <input type="number" id="db8" name="fel" min="1" max="3" value="1"
+                                    onchange="simahotdog.value = Number(Simahotdog) * Number(db8.value)">
+                                <hr>
+                                <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                    type="text" id="simahotdog">
+                                <label for="simahotdog"> Ft</label>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                            onclick="kosarba('Simahotdog',db8.value)">HOZZÁADÁS</button>
                     </div>
                 </div>
             </div>
         </div>
 
 
+
         <!-- TERMÉKEK 2. csoport -->
 
-        <div class="row">
+        <div class="row etel">
             <div class="col-md-12 text-center">
-                <h2 class="mb-4">SZENDVICSEK</h2>
+                <h2 id="szendvicsek" class="mb-4">SZENDVICSEK</h2>
             </div>
         </div>
 
         <div class="row" id="product-list2">
             <div class="col-md-3 mb-4">
-                <div class="card">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#t009"
+                    onclick="csirkesszendvics.value = Number(Csirkesszendvics) * Number(db9.value)">
                     <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/hideg/csike_szendvics.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">CSIRKÉS SZENDVICS</h5>
+                        <h5 class="card-title">Csirkés szendvics</h5>
                         <p class="card-text">Frissen, hidegen, ez is pontosan ahogy szereted!</p>
-                        <p class="ar text-center">220 Ft</p>
+                        <p class="ar text-center" id="csirkesszendvics_">Ár Ft</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 mb-4">
-                <div class="card">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/hideg/szendvics.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">VEGA SZENDVICS</h5>
-                        <p class="card-text">Sok zöldséggel, és sajttal, salátával szervírozva.</p>
-                        <p class="ar text-center">650 Ft</p>
+
+            <!--Olaszos burger Modal -->
+        <div class="modal fade" id="t009" tabindex="-1" aria-labelledby="t009Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="t009Label">Csirkés szendvics</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/hideg/tojas.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">TOJÁS KARIKÁK</h5>
-                        <p class="card-text">Főtt tojás hűtve, házi töltelékkel, meg kell kóstolni.</p>
-                        <p class="ar text-center">400 Ft</p>
+                    <div class="modal-body">
+                        <form action="javascript:void(0)">
+                            <fieldset>
+                                <legend>feltétek:</legend>
+                                <input type="checkbox" name="fel" id="Duplahambi_ketchup">
+                                <label for="Duplahambi_ketchup">ketchup</label> <br>
+                                <input type="checkbox" name="fel" id="Duplahambi_mustar">
+                                <label for="Duplahambi_mustar">mustár</label> <br>
+                                <input type="checkbox" name="fel" id="Duplahambi_majonez">
+                                <label for="Duplahambi_majonez">majonéz</label> <br>
+                                <hr>
+                                <label for="db9">darab</label>
+                                <input type="number" id="db9" name="fel" min="1" max="3" value="1"
+                                    onchange="csirkesszendvics.value = Number(Csirkesszendvics) * Number(db9.value)">
+                                <hr>
+                                <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                    type="text" id="csirkesszendvics">
+                                <label for="csirkesszendvics"> Ft</label>
+                            </fieldset>
+                        </form>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/hideg/vajas kenyer.jfif"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">VAJAS KENYÉR</h5>
-                        <p class="card-text">Egy nagy szelet kenyér, jól megvajazva, hogy ne éhezz!</p>
-                        <p class="ar text-center">450 Ft</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                            onclick="kosarba('Csirkesszendvics',db9.value)">HOZZÁADÁS</button>
                     </div>
                 </div>
             </div>
         </div>
+
+
+            <div class="col-md-3 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#t010" 
+                    onclick="vegaszendvics.value = Number(Vegaszendvics) * Number(db10.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/hideg/szendvics.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Vega szendvics</h5>
+                        <p class="card-text">Sok zöldséggel, és sajttal, salátával szervírozva.</p>
+                        <p class="ar text-center" id="vegaszendvics_">Ár Ft</p>
+                    </div>
+                </div>
+            </div>
+
+             <!--Olaszos burger Modal -->
+        <div class="modal fade" id="t010" tabindex="-1" aria-labelledby="t010Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="t010Label">Vega szendvics</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="javascript:void(0)">
+                            <fieldset>
+                                <legend>feltétek:</legend>
+                                <input type="checkbox" name="fel" id="Duplahambi_ketchup">
+                                <label for="Duplahambi_ketchup">ketchup</label> <br>
+                                <input type="checkbox" name="fel" id="Duplahambi_mustar">
+                                <label for="Duplahambi_mustar">mustár</label> <br>
+                                <input type="checkbox" name="fel" id="Duplahambi_majonez">
+                                <label for="Duplahambi_majonez">majonéz</label> <br>
+                                <hr>
+                                <label for="db10">darab</label>
+                                <input type="number" id="db10" name="fel" min="1" max="3" value="1"
+                                    onchange="vegaszendvics.value = Number(Vegaszendvics) * Number(db10.value)">
+                                <hr>
+                                <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                    type="text" id="vegaszendvics">
+                                <label for="vegaszendvics"> Ft</label>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                            onclick="kosarba('Vegaszendvics',db10.value)">HOZZÁADÁS</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+            <div class="col-md-3 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#t011"
+                    onclick="gyrosbagett.value = Number(Gyrosbagett) * Number(db11.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/hideg/Gyrosbagett.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Gyros bagett</h5>
+                        <p class="card-text">Főtt tojás hűtve, házi töltelékkel, meg kell kóstolni.</p>
+                        <p class="ar text-center" id="gyrosbagett_">Ár Ft</p>
+                    </div>
+                </div>
+            </div>
+
+               <!--Olaszos burger Modal -->
+        <div class="modal fade" id="t011" tabindex="-1" aria-labelledby="t011Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="t011Label">Gyros bagett</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="javascript:void(0)">
+                            <fieldset>
+                                <legend>feltétek:</legend>
+                                <input type="checkbox" name="fel" id="Duplahambi_ketchup">
+                                <label for="Duplahambi_ketchup">ketchup</label> <br>
+                                <input type="checkbox" name="fel" id="Duplahambi_mustar">
+                                <label for="Duplahambi_mustar">mustár</label> <br>
+                                <input type="checkbox" name="fel" id="Duplahambi_majonez">
+                                <label for="Duplahambi_majonez">majonéz</label> <br>
+                                <hr>
+                                <label for="db11">darab</label>
+                                <input type="number" id="db11" name="fel" min="1" max="3" value="1"
+                                    onchange="gyrosbagett.value = Number(Gyrosbagett) * Number(db11.value)">
+                                <hr>
+                                <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                    type="text" id="gyrosbagett">
+                                <label for="gyrosbagett"> Ft</label>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                            onclick="kosarba('Gyrosbagett',db11.value)">HOZZÁADÁS</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+            <div class="col-md-3 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#t012"
+                    onclick="royalbagett.value = Number(Royalbagett) * Number(db12.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/hideg/Royalbagett.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Royal bagett</h5>
+                        <p class="card-text">Egy nagy szelet kenyér, jól megvajazva, hogy ne éhezz!</p>
+                        <p class="ar text-center" id="royalbagett_">Ár Ft</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+              <!--Olaszos burger Modal -->
+              <div class="modal fade" id="t012" tabindex="-1" aria-labelledby="t012Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="t012Label">Royal bagett</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <legend>feltétek:</legend>
+                                    <input type="checkbox" name="fel" id="Duplahambi_ketchup">
+                                    <label for="Duplahambi_ketchup">ketchup</label> <br>
+                                    <input type="checkbox" name="fel" id="Duplahambi_mustar">
+                                    <label for="Duplahambi_mustar">mustár</label> <br>
+                                    <input type="checkbox" name="fel" id="Duplahambi_majonez">
+                                    <label for="Duplahambi_majonez">majonéz</label> <br>
+                                    <hr>
+                                    <label for="db12">darab</label>
+                                    <input type="number" id="db12" name="fel" min="1" max="3" value="1"
+                                        onchange="royalbagett.value = Number(Royalbagett) * Number(db12.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="royalbagett">
+                                    <label for="royalbagett"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('Royalbagett',db12.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
 
         <!-- EGYÉBB csoport -->
 
@@ -573,3 +994,7 @@
 </body>
 
 </html>
+
+
+
+ 
