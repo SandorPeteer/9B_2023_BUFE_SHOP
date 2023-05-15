@@ -251,7 +251,61 @@
                 </div>
             </div>
 
+<!-- Mars Kártya -->
+<div class="row" id="product-list1">
+    <div class="col-md-3 mb-4">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#mars_csoki"
+            onclick="mars_csokika.value = Number(Mars) * Number(csoki1.value)">
+            <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/nasi/Mars.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mars</h5>
+                <p class="card-text">Frissen, ropogósan sütve, pontosan ahogy szereted!</p>
+                <p class="ar text-center" id="mars_csokika_">ÁR Ft</p>
+            </div>
+        </div>
+    </div>
 
+    <!-- Mars Modal -->
+    <div class="modal fade" id="mars_csoki" tabindex="-1" aria-labelledby="mars_csokiLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="mars_csokiLabel">Mars</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="javascript:void(0)">
+                        <fieldset>
+                            <legend>feltétek:</legend>
+                            <input type="checkbox" name="fel" id="Mars_ketchup">
+                            <label for="Mars_ketchup">ketchup</label> <br>
+                            <input type="checkbox" name="fel" id="Mars_mustar">
+                            <label for="Mars_mustar">mustár</label> <br>
+                            <input type="checkbox" name="fel" id="Mars_majonez">
+                            <label for="Mars_majonez">majonéz</label> <br>
+                            <hr>
+                            <label for="csoki1
+            ">darab</label>
+                            <input type="number" name="fel" id="csoki1
+            " min="1" max="3" value="1"
+                                onchange="mars_csokika.value = Number(Mars) * Number(csoki1
+                .value)">
+                            <hr>
+                            <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                type="text" id="mars_csokika">
+                            <label for="mars_csokika"> Ft</label>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                        onclick="kosarba('Mars',csoki1
+        .value)">HOZZÁADÁS</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
