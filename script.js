@@ -10,6 +10,7 @@ var Csirkesszendvics = 750;
 var Vegaszendvics = 400;
 var Gyrosbagett = 800;
 var Royalbagett = 650;
+var MarsCsoki = 150;
 
 function aktualis_ar() {
    document.getElementById('sajtburger_').innerHTML = Sajtburger + " Ft";
@@ -24,6 +25,7 @@ function aktualis_ar() {
    document.getElementById('vegaszendvics_').innerHTML = Vegaszendvics + " Ft";
    document.getElementById('gyrosbagett_').innerHTML = Gyrosbagett + " Ft";
    document.getElementById('royalbagett_').innerHTML = Royalbagett + " Ft";
+   document.getElementById('mars_csokika_').innerHTML = MarsCsoki + " Ft";
 
 
 
