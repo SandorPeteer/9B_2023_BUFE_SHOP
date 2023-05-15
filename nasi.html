@@ -251,6 +251,56 @@
                 </div>
             </div>
 
+            
+            <!-- Csirkés Chips Kártya -->
+<div class="row" id="product-list1">
+    <div class="col-md-3 mb-4">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#csirkéscsipszke"
+            onclick="csirkéscsipszke.value = Number(Mars) * Number(csirkéscsipszke1.value)">
+            <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/nasi/csirkés%20chips.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Csirkés Chips</h5>
+                <p class="card-text">Karamellás mogyorós ízvilág.</p>
+                <p class="ar text-center" id="csirkéscsipszke_">ÁR Ft</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Csirkés Chips Modal -->
+    <div class="modal fade" id="csirkéscsipszke_chips" tabindex="-1" aria-labelledby="csirkéscsipszke_chipsLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="csirkéscsipszke_chipsLabel">Csirkés Chips</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="javascript:void(0)">
+                        <fieldset>
+                            
+                            <label for="csirkéscsipszke1
+            ">darab</label>
+                            <input type="number" name="fel" id="csirkéscsipszke1
+            " min="1" max="3" value="1"
+                                onchange="csirkéscsipszke.value = Number(CsirkésChips) * Number(csirkéscsipszke1
+                .value)">
+                            <hr>
+                            <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                type="text" id="csirkéscsipszke">
+                            <label for="csirkéscsipszke"> Ft</label>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                        onclick="kosarba('Csirkés Chips',csirkéscsipszke1
+        .value)">HOZZÁADÁS</button>
+                </div>
+            </div>
+        </div>
+    </div>
+            
 <!-- Mars Kártya -->
 <div class="row" id="product-list1">
     <div class="col-md-3 mb-4">
