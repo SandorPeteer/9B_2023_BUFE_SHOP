@@ -72,7 +72,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2 mt-lg-0" href="index.html">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/logo/logo1.png" height="50" alt="Logo" loading="lazy">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/logo/logo1.png" height="50"
+                        alt="Logo" loading="lazy">
                 </a>
                 <!-- Left links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -121,7 +122,8 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
                         <li>
-                            <a class="dropdown-item" href="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/bejelentkezes.html">Profilom</a>
+                            <a class="dropdown-item"
+                                href="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/bejelentkezes.html">Profilom</a>
                         </li>
                     </ul>
                 </div>
@@ -135,7 +137,7 @@
 
     <main class="container py-5">
 
-        <!-- TERMÉKEK 1. csoport -->
+        <!-- EGYÉBB csoport -->
 
         <div class="row">
             <div class="col-md-12 text-center">
@@ -144,117 +146,107 @@
         </div>
 
 
-        
-        <!-- Rántotthús Kártya -->
-        <div class="row" id="product-list1">
+
+        <div class="row" id="product-list">
             <div class="col-md-3 mb-4">
-                <div class="card" data-bs-toggle="modal" data-bs-target="#t001"
-                    onclick="rantotthusi.value = Number(Rántotthús) * Number(db1.value)">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/rantotthus.webp"
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/cukor.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">RÁNTOTT HÚS</h5>
-                        <p class="card-text">Frissen, ropogósan sütve, pontosan ahogy szereted!</p>
-                        <p class="ar text-center" id="rantotthusi_">ÁR Ft</p>
+                        <h5 class="card-title">Cukor</h5>
+                        <p class="card-text">Kristály cukor 2g</p>
+                        <p class="ar text-center">20 Ft</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Rántotthús Modal -->
-            <div class="modal fade" id="t001" tabindex="-1" aria-labelledby="t001Label" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="t001Label">Rántott hús</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="javascript:void(0)">
-                                <fieldset>
-                                    <legend>feltétek:</legend>
-                                    <input type="checkbox" name="fel" id="Rántotthús_ketchup">
-                                    <label for="Rántotthús_ketchup">ketchup</label> <br>
-                                    <input type="checkbox" name="fel" id="Rántotthús_mustar">
-                                    <label for="Rántotthús_mustar">mustár</label> <br>
-                                    <input type="checkbox" name="fel" id="Rántotthús_majonez">
-                                    <label for="Rántotthús_majonez">majonéz</label> <br>
-                                    <hr>
-                                    <label for="db1">darab</label>
-                                    <input type="number" name="fel" id="db1" min="1" max="3" value="1"
-                                        onchange="rantotthusi.value = Number(Rántotthús) * Number(db1.value)">
-                                    <hr>
-                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
-                                        type="text" id="rantotthusi">
-                                    <label for="rantotthusi"> Ft</label>
-                                </fieldset>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                                onclick="kosarba('Rántotthús',db1.value)">HOZZÁADÁS</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-            <!--Duplahambi Káryta -->
             <div class="col-md-3 mb-4">
-                <div class="card" data-bs-toggle="modal" data-bs-target="#t002"
-                    onclick="duplahambi.value = Number(DuplaHamburger) * Number(db2.value)">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/bigmac.png"
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/so.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Só</h5>
+                        <p class="card-text">Tengeri só 2g</p>
+                        <p class="ar text-center">20 Ft</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/szivoszal.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">DUPLA HAMBI</h5>
-                        <p class="card-text">Dupla marhahúsos szezámmagos bundában.</p>
-                        <p class="ar text-center" id="duplahambi_">ÁR Ft</p>
+                        <h5 class="card-title">Szívószál</h5>
+                        <p class="card-text">Papír szívoszál</p>
+                        <p class="ar text-center">10 Ft</p>
                     </div>
                 </div>
             </div>
-
-            <!--Duplahambi Modal -->
-            <div class="modal fade" id="t002" tabindex="-1" aria-labelledby="t002Label" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="t002Label">Dupla Hamburger</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="javascript:void(0)">
-                                <fieldset>
-                                    <legend>feltétek:</legend>
-                                    <input type="checkbox" name="fel" id="Duplahambi_ketchup">
-                                    <label for="Duplahambi_ketchup">ketchup</label> <br>
-                                    <input type="checkbox" name="fel" id="Duplahambi_mustar">
-                                    <label for="Duplahambi_mustar">mustár</label> <br>
-                                    <input type="checkbox" name="fel" id="Duplahambi_majonez">
-                                    <label for="Duplahambi_majonez">majonéz</label> <br>
-                                    <hr>
-                                    <label for="db2">darab</label>
-                                    <input type="number" id="db2" name="fel" min="1" max="3" value="1"
-                                        onchange="duplahambi.value = Number(DuplaHamburger) * Number(db2.value)">
-                                    <hr>
-                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
-                                        type="text" id="duplahambi">
-                                    <label for="duplahambi"> Ft</label>
-                                </fieldset>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                                onclick="kosarba('DuplaHamburger',db2.value)">HOZZÁADÁS</button>
-                        </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/szalveta.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Szalvéta</h5>
+                        <p class="card-text">1db papír szalvéta</p>
+                        <p class="ar text-center">Ingyen</p>
                     </div>
                 </div>
             </div>
-
-
-
-
-
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/pohar.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pohár</h5>
+                        <p class="card-text">Papír pohár 2dl</p>
+                        <p class="ar text-center">20 Ft</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/melegites.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Melegítés</h5>
+                        <p class="card-text">Szendvics vagy étel melegítés</p>
+                        <p class="ar text-center">100 Ft</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/kanal.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Kanál</h5>
+                        <p class="card-text">Műanyag kanál</p>
+                        <p class="ar text-center">10 Ft</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/villa.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Villa</h5>
+                        <p class="card-text">Műanyag villa</p>
+                        <p class="ar text-center">10 Ft</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/kes.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Kés</h5>
+                        <p class="card-text">Műanyag kés</p>
+                        <p class="ar text-center">10 Ft</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
