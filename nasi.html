@@ -147,6 +147,62 @@
         
         <!-- Rántotthús Kártya -->
         <div class="row" id="product-list1">
+            
+            
+            
+             <!-- Sajtos_chips Kártya -->
+            <div class="col-md-3 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#Balazs01"
+                    onclick="sajtoschips.value = Number(SajtosChips) * Number(sajtoschipsdb.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/nasi/sajtos chips.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">SAJTOS CHIPS</h5>
+                        <p class="card-text">Sajtos chips valódi burgonyaszeletekből</p>
+                        <p class="ar text-center" id="sajtoschips_">ÁR Ft</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sajtos_chips Modal -->
+            <div class="modal fade" id="Balazs01" tabindex="-1" aria-labelledby="Balazs01Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="Balazs01Label">Sajtos chips</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <legend>méret:</legend>
+                                    <input type="radio" name="Sajtos_chips" id="Sajtos_chips_kicsi" checked>
+                                    <label for="Sajtos_chips_kicsi">kicsi</label> <br>
+                                    <input type="radio" name="Sajtos_chips" id="Sajtos_chips_nagy">
+                                    <label for="Sajtos_chips_nagy">nagy</label> <br>
+                                    <hr>
+                                    <label for="sajtoschipsdb">darab</label>
+                                    <input type="number" name="Sajtos_chips" id="sajtoschipsdb" min="1" max="3" value="1"
+                                        onchange="sajtoschips.value = Number(SajtosChips) * Number(sajtoschipsdb.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="sajtoschips">
+                                    <label for="sajtoschips"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('Sajtos_chips',sajtoschipsdb.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+            
             <div class="col-md-3 mb-4">
                 <div class="card" data-bs-toggle="modal" data-bs-target="#t001"
                     onclick="rantotthusi.value = Number(Rántotthús) * Number(db1.value)">
