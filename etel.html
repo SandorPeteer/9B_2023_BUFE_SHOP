@@ -788,6 +788,103 @@
 
 
         </div>
+     <div class="row etel">
+            <div class="col-md-12 text-center">
+                <h2 id="szendvicsek" class="mb-4">LEVESEK</h2>
+            </div>
+        </div>
+    <!-- Paradicsom leves  Kártya -->
+<div class="row" id="product-list1">
+    <div class="col-md-3 mb-4">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#paradicsom"
+            onclick="paradicsom.value = Number(Paradicsomleves) * Number(dbparadicsom.value)">
+            <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/paradicsomleves.jfif"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">paradicsom leves</h5>
+                <p class="card-text"></p>
+                <p class="ar text-center" id="paradicsomleves_">ÁR Ft</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Paradicsom leves Modal -->
+    <div class="modal fade" id="paradicsom" tabindex="-1" aria-labelledby="paradicsomLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="paradicsomLabel">Sajtburger</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="javascript:void(0)">
+                        <fieldset>
+                            <label for="dbparadicsom">darab</label>
+                            <input type="number" name="fel" id="dbparadicsom" min="1" max="3" value="1"
+                                onchange="paradicsom.value = Number(Paradicsom) * Number(dbparadicsom.value)">
+                            <hr>
+                            <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                type="text" id="paradicsom">
+                            <label for="paradicsom"> Ft</label>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                        onclick="kosarba('Paradicsom',dbparadicsom.value)">HOZZÁADÁS</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Husleves Kártya -->
+    <div class="row" id="product-list1">
+        <div class="col-md-3 mb-4">
+            <div class="card" data-bs-toggle="modal" data-bs-target="#husleves"
+                onclick="husleves.value = Number(husleves) * Number(dbhusleves.value)">
+                <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/husleves.jfif"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Húsleves</h5>
+                    <p class="card-text"></p>
+                    <p class="ar text-center" id="husleves">ÁR Ft</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Husleves Modal -->
+        <div class="modal fade" id="husleves" tabindex="-1" aria-labelledby="huslevesLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="huslevesLabel">husleves</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="javascript:void(0)">
+                            <fieldset>
+                                
+                                <label for="dbhusleves">darab</label>
+                                <input type="number" name="fel" id="dbhusleves" min="1" max="3" value="1"
+                                    onchange="husleves.value = Number(Husleves) * Number(dbhusleves.value)">
+                                <hr>
+                                <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                    type="text" id="husleves">
+                                <label for="husleves"> Ft</label>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                            onclick="kosarba('husleves',dbhusleves.value)">HOZZÁADÁS</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
