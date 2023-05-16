@@ -206,7 +206,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Sajtos Pizza</h5>
                             <p class="card-text">Frissen, ropogósan sütve, pontosan ahogy szereted!</p>
-                            <p class="ar text-center" id="Pizza_finom_">ÁR Ft</p>
+                            <p class="ar text-center" id="pizzafinom_">ÁR Ft</p>
                         </div>
                     </div>
                 </div>
@@ -413,7 +413,23 @@
         });
     </script>
 
-    <script src="script.js"></script>
+    <script>
+var Duplahambi = 500;
+var Csirkesszendvics = 750;
+var SajtosChips = 300;
+var SajtosPizza = 450;
+        
+function aktualis_ar() {
+   document.getElementById('duplahamburger_').innerHTML = Duplahambi + "Ft";
+   document.getElementById('csirkesszendvics_').innerHTML = Csirkesszendvics + " Ft";
+   document.getElementById('sajtoschips_').innerHTML = SajtosChips + " Ft";
+   document.getElementById('pizzafinom_').innerHTML = SajtosPizza + "Ft";
+}
+
+function kosarba(termek, darab) {
+    localStorage.setItem(termek, darab);
+}
+    </script>
 
     <!-- JavaScript links -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
