@@ -301,59 +301,61 @@
                 </div>
             </div>
 
-        </div>
 
 
-        <!-- Royal_Bagett Kártya -->
-        <div class="col-md-3 mb-4">
-            <div class="card" data-bs-toggle="modal" data-bs-target="#Ulrik4"
-                onclick="RoyalBagett.value = Number(Royal_Bagett) * Number(RoyalBagettdb.value)">
-                <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/hideg/Royalbagett.jpg"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">ROYAL BAGETT</h5>
-                    <p class="card-text">Salátával hússal zöldséggel megtöltött ropogós bagett. Érdemes még ma
-                        kipróbálni!</p>
-                    <p class="ar text-center" id="RoyalBagett_">ÁR Ft</p>
-                </div>
-            </div>
-        </div>
 
-        <!-- Royal_Bagett Modal -->
-        <div class="modal fade" id="Ulrik4" tabindex="-1" aria-labelledby="Ulrik4Label" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="Ulrik4Label">ROYAL BAGETT</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="javascript:void(0)">
-                            <fieldset>
-                                <legend>feltétek:</legend>
-                                <input type="checkbox" name="fel" id="Royal_Bagett_ketchup">
-                                <label for="Royal_Bagett_ketchup">ketchup</label> <br>
-                                <input type="checkbox" name="fel" id="Royal_Bagett_mustar">
-                                <label for="Royal_Bagett_mustar">mustár</label> <br>
-                                <input type="checkbox" name="fel" id="Royal_Bagett_majonez">
-                                <label for="Royal_Bagett_majonez">majonéz</label> <br>
-                                <hr>
-                                <label for="RoyalBagettdb">darab</label>
-                                <input type="number" name="fel" id="RoyalBagettdb" min="1" max="3" value="1"
-                                    onchange="RoyalBagett.value = Number(Royal_Bagett) * Number(RoyalBagettdb.value)">
-                                <hr>
-                                <input style="background-color: aliceblue; width: 50px; text-align: center;" type="text"
-                                    id="RoyalBagett">
-                                <label for="RoyalBagett"> Ft</label>
-                            </fieldset>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                            onclick="kosarba('Royal_Bagett',RoyalBagettdb.value)">HOZZÁADÁS</button>
+            <!-- Royal_Bagett Kártya -->
+            <div class="col-md-3 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#Ulrik4"
+                    onclick="RoyalBagett.value = Number(Royal_Bagett) * Number(RoyalBagettdb.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/hideg/Royalbagett.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">ROYAL BAGETT</h5>
+                        <p class="card-text">Salátával hússal zöldséggel megtöltött ropogós bagett. Érdemes még ma
+                            kipróbálni!</p>
+                        <p class="ar text-center" id="RoyalBagett_">ÁR Ft</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Royal_Bagett Modal -->
+            <div class="modal fade" id="Ulrik4" tabindex="-1" aria-labelledby="Ulrik4Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="Ulrik4Label">ROYAL BAGETT</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <legend>feltétek:</legend>
+                                    <input type="checkbox" name="fel" id="Royal_Bagett_ketchup">
+                                    <label for="Royal_Bagett_ketchup">ketchup</label> <br>
+                                    <input type="checkbox" name="fel" id="Royal_Bagett_mustar">
+                                    <label for="Royal_Bagett_mustar">mustár</label> <br>
+                                    <input type="checkbox" name="fel" id="Royal_Bagett_majonez">
+                                    <label for="Royal_Bagett_majonez">majonéz</label> <br>
+                                    <hr>
+                                    <label for="RoyalBagettdb">darab</label>
+                                    <input type="number" name="fel" id="RoyalBagettdb" min="1" max="3" value="1"
+                                        onchange="RoyalBagett.value = Number(Royal_Bagett) * Number(RoyalBagettdb.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="RoyalBagett">
+                                    <label for="RoyalBagett"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('Royal_Bagett',RoyalBagettdb.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>
