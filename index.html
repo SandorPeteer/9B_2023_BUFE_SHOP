@@ -250,26 +250,26 @@
                     </div>
                 </div>
             </div>
-            <!--Duplahambi Káryta -->
+            <!--BBQ hamburger Káryta -->
             <div class="col-md-3 mb-4">
-                <div class="card" data-bs-toggle="modal" data-bs-target="#t002"
-                    onclick="duplahambi.value = Number(DuplaHamburger) * Number(db2.value)">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/bigmac.png"
+                <div class="card" data-bs-toggle="modal" data-bs-target="#t003"
+                    onclick="bbqhamburger.value = Number(Bbqhamburger) * Number(db3.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/BBQ hamburger.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">DUPLA HAMBI</h5>
-                        <p class="card-text">Dupla marhahúsos szezámmagos bundában.</p>
-                        <p class="ar text-center" id="duplahambii_">ÁR Ft</p>
+                        <h5 class="card-title">BBQ hamburger</h5>
+                        <p class="card-text">Marhahúsos hamburger, uborkával és hagymával töltve.</p>
+                        <p class="ar text-center" id="bbqhamburger_">Ár Ft</p>
                     </div>
                 </div>
             </div>
 
-            <!--Duplahambi Modal -->
-            <div class="modal fade" id="t002" tabindex="-1" aria-labelledby="t002Label" aria-hidden="true">
+            <!--BBQ hamburger Modal -->
+            <div class="modal fade" id="t003" tabindex="-1" aria-labelledby="t003Label" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="t002Label">Dupla Hamburger</h1>
+                            <h1 class="modal-title fs-5" id="t003Label">BBQ hamburger</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -283,19 +283,19 @@
                                     <input type="checkbox" name="fel" id="Duplahambi_majonez">
                                     <label for="Duplahambi_majonez">majonéz</label> <br>
                                     <hr>
-                                    <label for="db2">darab</label>
-                                    <input type="number" id="db2" name="fel" min="1" max="3" value="1"
-                                        onchange="duplahambi.value = Number(DuplaHamburger) * Number(db2.value)">
+                                    <label for="db3">darab</label>
+                                    <input type="number" id="db3" name="fel" min="1" max="3" value="1"
+                                        onchange="bbqhamburger.value = Number(Bbqhamburger) * Number(db3.value)">
                                     <hr>
                                     <input style="background-color: aliceblue; width: 50px; text-align: center;"
-                                        type="text" id="duplahambi">
-                                    <label for="duplahambi"> Ft</label>
+                                        type="text" id="bbqhamburger">
+                                    <label for="bbqhamburger"> Ft</label>
                                 </fieldset>
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                                onclick="kosarba('DuplaHamburger',db2.value)">HOZZÁADÁS</button>
+                                onclick="kosarba('Bbqhamburger',db3.value)">HOZZÁADÁS</button>
                         </div>
                     </div>
                 </div>
@@ -417,13 +417,13 @@
     <script>
         var Csirkés_Szendvics = 750;
         var Pizza_finom = 450;
-        var DuplaHamburger = 500;
+        var Bbqhamburger = 500;
         var csirkéscsipszke = 300;
 
         function aktualis_ar() {
             document.getElementById('csirkesszendvics_').innerHTML = Csirkés_Szendvics + " Ft";
             document.getElementById('pizzafinom_').innerHTML = Pizza_finom + "Ft";
-            document.getElementById('duplahambii_').innerHTML = DuplaHamburger + "Ft";
+            document.getElementById('bbqhamburger_').innerHTML = Bbqhamburger + "Ft";
             document.getElementById('csirkéscsipszke_').innerHTML = csirkéscsipszke + " Ft";
         }
 
