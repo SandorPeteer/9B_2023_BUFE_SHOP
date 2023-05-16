@@ -198,7 +198,115 @@
             </div>
 
 
+            <!-- Pizza_finom Kártya -->
+            <div class="row" id="product-list1">
+                <div class="col-md-3 mb-4">
+                    <div class="card" data-bs-toggle="modal" data-bs-target="#t001"
+                        onclick="Pizza_finom.value = Number(Pizza_finom) * Number(db1.value)">
+                        <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/pizza-9.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Sajtos Pizza</h5>
+                            <p class="card-text">Frissen, ropogósan sütve, pontosan ahogy szereted!</p>
+                            <p class="ar text-center" id="Pizza_finom_">ÁR Ft</p>
+                        </div>
+                    </div>
+                </div>
 
+
+                <!-- Pizza_finom Modal -->
+                <div class="modal fade" id="t001" tabindex="-1" aria-labelledby="t001Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="t001Label">Pizza_finom</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="javascript:void(0)">
+                                    <fieldset>
+                                        <legend>feltétek:</legend>
+                                        <input type="checkbox" name="fel" id="Rántotthús_ketchup">
+                                        <label for="Rántotthús_ketchup">ketchup</label> <br>
+                                        <input type="checkbox" name="fel" id="Rántotthús_mustar">
+                                        <label for="Rántotthús_mustar">mustár</label> <br>
+                                        <input type="checkbox" name="fel" id="Rántotthús_majonez">
+                                        <label for="Rántotthús_majonez">majonéz</label> <br>
+                                        <hr>
+                                        <label for="db1">darab</label>
+                                        <input type="number" name="fel" id="db1" min="1" max="3" value="1"
+                                            onchange="Pizza_finom.value = Number(Pizza_finom) * Number(db1.value)">
+                                        <hr>
+                                        <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                            type="text" id="Pizza_finom">
+                                        <label for="Pizza_finom"> Ft</label>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                    onclick="kosarba('Pizza_finom',db1.value)">HOZZÁADÁS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- mini_pizza Kártya -->
+                <div class="row" id="product-list1">
+                    <div class="col-md-3 mb-4">
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#t001"
+                            onclick="mini_pizza.value = Number(mini_pizza) * Number(db1.value)">
+                            <img src="https://github.com/SandorPeteer/9B_2023_BUFE_SHOP/blob/main/img/etel/meleg/minipizza.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mini Pizza</h5>
+                                <p class="card-text">Frissen, ropogósan sütve, mini pizza pontosan ahogy szereted!</p>
+                                <p class="ar text-center" id="mini_pizza_">ÁR Ft</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- mini_pizza Modal -->
+                    <div class="modal fade" id="t001" tabindex="-1" aria-labelledby="t001Label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="t001Label">mini_pizza</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="javascript:void(0)">
+                                        <fieldset>
+                                            <legend>feltétek:</legend>
+                                            <input type="checkbox" name="fel" id="Rántotthús_ketchup">
+                                            <label for="Rántotthús_ketchup">sajt</label> <br>
+                                            <input type="checkbox" name="fel" id="Rántotthús_mustar">
+                                            <label for="Rántotthús_mustar">szalámi</label> <br>
+                                            <input type="checkbox" name="fel" id="Rántotthús_majonez">
+                                            <label for="Rántotthús_majonez">ananász</label> <br>
+                                            <hr>
+                                            <label for="db1">darab</label>
+                                            <input type="number" name="fel" id="db1" min="1" max="3" value="1"
+                                                onchange="mini_pizza.value = Number(Pizza_finom) * Number(db1.value)">
+                                            <hr>
+                                            <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                                type="text" id="Pizza_finom">
+                                            <label for="Pizza_finom"> Ft</label>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                        onclick="kosarba('mini_pizza',db1.value)">HOZZÁADÁS</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
             <!--Duplahambi Káryta -->
             <div class="col-md-3 mb-4">
