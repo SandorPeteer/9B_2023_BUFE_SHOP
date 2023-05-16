@@ -23,7 +23,7 @@ function aktualis_ar() {
    document.getElementById('newyorkhotdog_').innerHTML = Newyorkhotdog + " Ft";
    document.getElementById('amerikaihotdog_').innerHTML = Amerikaihotdog + " Ft";
    document.getElementById('simahotdog_').innerHTML = Simahotdog + " Ft";
-   document.getElementById('csirkesszendvics').innerHTML = Csirkesszendvics + " Ft";
+   document.getElementById('csirkesszendvics_').innerHTML = Csirkesszendvics + " Ft";
    document.getElementById('vegaszendvics_').innerHTML = Vegaszendvics + " Ft";
    document.getElementById('gyrosbagett_').innerHTML = Gyrosbagett + " Ft";
    document.getElementById('royalbagett_').innerHTML = Royalbagett + " Ft";
