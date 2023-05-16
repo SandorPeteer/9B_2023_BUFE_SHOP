@@ -196,174 +196,8 @@
                     </div>
                 </div>
             </div>
-
-
-            <!-- Vega_Szendvics Kártya -->
-            <div class="col-md-3 mb-4">
-                <div class="card" data-bs-toggle="modal" data-bs-target="#Ulrik2"
-                    onclick="Vegaszendvics.value = Number(Vega_Szendvics) * Number(Vegaszendvicsdb.value)">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/hideg/szendvics.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">VEGA SZENDVICS</h5>
-                        <p class="card-text">Sok zöldséggel, és sajtal, alátával szervírozva</p>
-                        <p class="ar text-center" id="vegaszendvics_">ÁR Ft</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Vega_Szendvics Modal -->
-            <div class="modal fade" id="Ulrik2" tabindex="-1" aria-labelledby="Ulrik2Label" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="Ulrik2Label">Vega Szendvics</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="javascript:void(0)">
-                                <fieldset>
-                                    <legend>feltétek:</legend>
-                                    <input type="checkbox" name="fel" id="Vega_Szendvics_ketchup">
-                                    <label for="Vega_Szendvics_ketchup">ketchup</label> <br>
-                                    <input type="checkbox" name="fel" id="Vega_Szendvics_mustar">
-                                    <label for="Vega_Szendvics_mustar">mustár</label> <br>
-                                    <input type="checkbox" name="fel" id="Vega_Szendvics_majonez">
-                                    <label for="Vega_Szendvics_majonez">majonéz</label> <br>
-                                    <hr>
-                                    <label for="Vegaszendvicsdb">darab</label>
-                                    <input type="number" name="fel" id="Vegaszendvicsdb" min="1" max="3" value="1"
-                                        onchange="Vegaszendvics.value = Number(Vega_Szendvics) * Number(Vegaszendvicsdb.value)">
-                                    <hr>
-                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
-                                        type="text" id="Vegaszendvics">
-                                    <label for="Vegaszendvics"> Ft</label>
-                                </fieldset>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                                onclick="kosarba('Vega_Szendvics',Vegaszendvicsdb.value)">HOZZÁADÁS</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Gyros_Bagett Kártya -->
-            <div class="col-md-3 mb-4">
-                <div class="card" data-bs-toggle="modal" data-bs-target="#Ulrik3"
-                    onclick="GyrosBagett.value = Number(Gyros_Bagett) * Number(GyrosBagettdb.value)">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/hideg/Gyrosbagett.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Gyros Bagett</h5>
-                        <p class="card-text">Gyrossal, zöldséggel töltött bagett finomság.</p>
-                        <p class="ar text-center" id="gyrosbagett_">ÁR Ft</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Gyros_Bagett Modal -->
-            <div class="modal fade" id="Ulrik3" tabindex="-1" aria-labelledby="Ulrik3Label" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="Ulrik3Label">GYROS BAGETT</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="javascript:void(0)">
-                                <fieldset>
-                                    <legend>feltétek:</legend>
-                                    <input type="checkbox" name="fel" id="Gyros_Bagett_ketchup">
-                                    <label for="Gyros_Bagett_ketchup">ketchup</label> <br>
-                                    <input type="checkbox" name="fel" id="Gyros_Bagett_mustar">
-                                    <label for="Gyros_Bagett_mustar">mustár</label> <br>
-                                    <input type="checkbox" name="fel" id="Gyros_Bagett_majonez">
-                                    <label for="Gyros_Bagett_majonez">majonéz</label> <br>
-                                    <hr>
-                                    <label for="GyrosBagettdb">darab</label>
-                                    <input type="number" name="fel" id="GyrosBagettdb" min="1" max="3" value="1"
-                                        onchange="GyrosBagett.value = Number(Gyros_Bagett) * Number(GyrosBagettdb.value)">
-                                    <hr>
-                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
-                                        type="text" id="GyrosBagett">
-                                    <label for="GyrosBagett"> Ft</label>
-                                </fieldset>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                                onclick="kosarba('Gyros_Bagett',GyrosBagettdb.value)">HOZZÁADÁS</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-            <!-- Royal_Bagett Kártya -->
-            <div class="col-md-3 mb-4">
-                <div class="card" data-bs-toggle="modal" data-bs-target="#Ulrik4"
-                    onclick="RoyalBagett.value = Number(Royal_Bagett) * Number(RoyalBagettdb.value)">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/hideg/Royalbagett.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">ROYAL BAGETT</h5>
-                        <p class="card-text">Salátával hússal zöldséggel megtöltött ropogós bagett</p>
-                        <p class="ar text-center" id="royalbagett_">ÁR Ft</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Royal_Bagett Modal -->
-            <div class="modal fade" id="Ulrik4" tabindex="-1" aria-labelledby="Ulrik4Label" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="Ulrik4Label">ROYAL BAGETT</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="javascript:void(0)">
-                                <fieldset>
-                                    <legend>feltétek:</legend>
-                                    <input type="checkbox" name="fel" id="Royal_Bagett_ketchup">
-                                    <label for="Royal_Bagett_ketchup">ketchup</label> <br>
-                                    <input type="checkbox" name="fel" id="Royal_Bagett_mustar">
-                                    <label for="Royal_Bagett_mustar">mustár</label> <br>
-                                    <input type="checkbox" name="fel" id="Royal_Bagett_majonez">
-                                    <label for="Royal_Bagett_majonez">majonéz</label> <br>
-                                    <hr>
-                                    <label for="RoyalBagettdb">darab</label>
-                                    <input type="number" name="fel" id="RoyalBagettdb" min="1" max="3" value="1"
-                                        onchange="RoyalBagett.value = Number(Royal_Bagett) * Number(RoyalBagettdb.value)">
-                                    <hr>
-                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
-                                        type="text" id="RoyalBagett">
-                                    <label for="RoyalBagett"> Ft</label>
-                                </fieldset>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                                onclick="kosarba('Royal_Bagett',RoyalBagettdb.value)">HOZZÁADÁS</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-   
-     
-            <div class="row" id="product-list1">
-
-            <!-- Pizza_finom Kártya -->
+             
+                  <!-- Pizza_finom Kártya -->
                 <div class="col-md-3 mb-4">
                     <div class="card" data-bs-toggle="modal" data-bs-target="#t001"
                         onclick="Pizza_finom.value = Number(Pizza_finom) * Number(db1.value)">
@@ -415,63 +249,7 @@
                         </div>
                     </div>
                 </div>
-
-
-
-                <!-- mini_pizza Kártya -->
-                    <div class="col-md-3 mb-4">
-                        <div class="card" data-bs-toggle="modal" data-bs-target="#t001"
-                            onclick="mini_pizza.value = Number(mini_pizza) * Number(db1.value)">
-                            <img src="https://github.com/SandorPeteer/9B_2023_BUFE_SHOP/blob/main/img/etel/meleg/minipizza.jpg"
-                                class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Mini Pizza</h5>
-                                <p class="card-text">Frissen, ropogósan sütve, mini pizza pontosan ahogy szereted!</p>
-                                <p class="ar text-center" id="mini_pizza_">ÁR Ft</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- mini_pizza Modal -->
-                    <div class="modal fade" id="t001" tabindex="-1" aria-labelledby="t001Label" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="t001Label">mini_pizza</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form action="javascript:void(0)">
-                                        <fieldset>
-                                            <legend>feltétek:</legend>
-                                            <input type="checkbox" name="fel" id="Rántotthús_ketchup">
-                                            <label for="Rántotthús_ketchup">sajt</label> <br>
-                                            <input type="checkbox" name="fel" id="Rántotthús_mustar">
-                                            <label for="Rántotthús_mustar">szalámi</label> <br>
-                                            <input type="checkbox" name="fel" id="Rántotthús_majonez">
-                                            <label for="Rántotthús_majonez">ananász</label> <br>
-                                            <hr>
-                                            <label for="db1">darab</label>
-                                            <input type="number" name="fel" id="db1" min="1" max="3" value="1"
-                                                onchange="mini_pizza.value = Number(Pizza_finom) * Number(db1.value)">
-                                            <hr>
-                                            <input style="background-color: aliceblue; width: 50px; text-align: center;"
-                                                type="text" id="Pizza_finom">
-                                            <label for="Pizza_finom"> Ft</label>
-                                        </fieldset>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                                        onclick="kosarba('mini_pizza',db1.value)">HOZZÁADÁS</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-            <!--Duplahambi Káryta -->
+                             <!--Duplahambi Káryta -->
             <div class="col-md-3 mb-4">
                 <div class="card" data-bs-toggle="modal" data-bs-target="#t002"
                     onclick="duplahambi.value = Number(DuplaHamburger) * Number(db2.value)">
@@ -521,14 +299,53 @@
                     </div>
                 </div>
             </div>
+                 
+                 <!-- Csirkés Chips Kártya -->
+            <div class="col-md-3 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#csirkéscsipszke"
+                    onclick="csirkéscsipszkez.value = Number(csirkéscsipszke) * Number(csirkéscsipszke1.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/nasi/csirkés%20chips.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Csirkés Chips</h5>
+                        <p class="card-text">Karamellás mogyorós ízvilág.</p>
+                        <p class="ar text-center" id="csirkéscsipszke_">ÁR Ft</p>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Csirkés Chips Modal -->
+            <div class="modal fade" id="csirkéscsipszke" tabindex="-1"
+                aria-labelledby="csirkéscsipszke_chipsLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="csirkéscsipszke_chipsLabel">Csirkés Chips</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
 
+                                    <label for="csirkéscsipszke1">darab</label>
+                                    <input type="number" name="fel" id="csirkéscsipszke1" min="1" max="3" value="1"
+                                        onchange="csirkéscsipszkez.value = Number(csirkéscsipszke) * Number(csirkéscsipszke1.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="csirkéscsipszkez">
+                                    <label for="csirkéscsipszkez"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('Csirkés Chips',csirkéscsipszke1.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-
-
-        </div>
-
-
+    </div>
 
 
     </main>
