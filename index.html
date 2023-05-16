@@ -72,7 +72,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2 mt-lg-0" href="index.html">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/logo/logo1.png" height="50" alt="Logo" loading="lazy">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/logo/logo1.png" height="50"
+                        alt="Logo" loading="lazy">
                 </a>
                 <!-- Left links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -121,7 +122,8 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
                         <li>
-                            <a class="dropdown-item" href="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/bejelentkezes.html">Profilom</a>
+                            <a class="dropdown-item"
+                                href="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/bejelentkezes.html">Profilom</a>
                         </li>
                     </ul>
                 </div>
@@ -144,7 +146,7 @@
         </div>
 
 
-             <div class="row" id="product-list1">
+        <div class="row" id="product-list1">
 
             <!-- Csirkés_Szendvics Kártya -->
             <div class="col-md-3 mb-4">
@@ -196,60 +198,59 @@
                     </div>
                 </div>
             </div>
-             
-                  <!-- Pizza_finom Kártya -->
-                <div class="col-md-3 mb-4">
-                    <div class="card" data-bs-toggle="modal" data-bs-target="#t001"
-                        onclick="Pizza_finom.value = Number(Pizza_finom) * Number(db1.value)">
-                        <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/pizza-9.jpg"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Sajtos Pizza</h5>
-                            <p class="card-text">Frissen, ropogósan sütve, pontosan ahogy szereted!</p>
-                            <p class="ar text-center" id="pizzafinom_">ÁR Ft</p>
+
+            <!-- Pizza_finom Kártya -->
+            <div class="col-md-3 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#t001"
+                    onclick="Pizza_finomz.value = Number(Pizza_finom) * Number(db1.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/pizza-9.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Sajtos Pizza</h5>
+                        <p class="card-text">Frissen, ropogósan sütve, pontosan ahogy szereted!</p>
+                        <p class="ar text-center" id="pizzafinom_">ÁR Ft</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Pizza_finom Modal -->
+            <div class="modal fade" id="t001" tabindex="-1" aria-labelledby="t001Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="t001Label">Pizza_finom</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <legend>feltétek:</legend>
+                                    <input type="checkbox" name="fel" id="Rántotthús_ketchup">
+                                    <label for="Rántotthús_ketchup">ketchup</label> <br>
+                                    <input type="checkbox" name="fel" id="Rántotthús_mustar">
+                                    <label for="Rántotthús_mustar">mustár</label> <br>
+                                    <input type="checkbox" name="fel" id="Rántotthús_majonez">
+                                    <label for="Rántotthús_majonez">majonéz</label> <br>
+                                    <hr>
+                                    <label for="db1">darab</label>
+                                    <input type="number" name="fel" id="db1" min="1" max="3" value="1"
+                                        onchange="Pizza_finomz.value = Number(Pizza_finom) * Number(db1.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="Pizza_finomz">
+                                    <label for="Pizza_finomz"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('Pizza_finom',db1.value)">HOZZÁADÁS</button>
                         </div>
                     </div>
                 </div>
-
-
-                <!-- Pizza_finom Modal -->
-                <div class="modal fade" id="t001" tabindex="-1" aria-labelledby="t001Label" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="t001Label">Pizza_finom</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form action="javascript:void(0)">
-                                    <fieldset>
-                                        <legend>feltétek:</legend>
-                                        <input type="checkbox" name="fel" id="Rántotthús_ketchup">
-                                        <label for="Rántotthús_ketchup">ketchup</label> <br>
-                                        <input type="checkbox" name="fel" id="Rántotthús_mustar">
-                                        <label for="Rántotthús_mustar">mustár</label> <br>
-                                        <input type="checkbox" name="fel" id="Rántotthús_majonez">
-                                        <label for="Rántotthús_majonez">majonéz</label> <br>
-                                        <hr>
-                                        <label for="db1">darab</label>
-                                        <input type="number" name="fel" id="db1" min="1" max="3" value="1"
-                                            onchange="Pizza_finom.value = Number(Pizza_finom) * Number(db1.value)">
-                                        <hr>
-                                        <input style="background-color: aliceblue; width: 50px; text-align: center;"
-                                            type="text" id="Pizza_finom">
-                                        <label for="Pizza_finom"> Ft</label>
-                                    </fieldset>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                                    onclick="kosarba('Pizza_finom',db1.value)">HOZZÁADÁS</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                             <!--Duplahambi Káryta -->
+            </div>
+            <!--Duplahambi Káryta -->
             <div class="col-md-3 mb-4">
                 <div class="card" data-bs-toggle="modal" data-bs-target="#t002"
                     onclick="duplahambi.value = Number(DuplaHamburger) * Number(db2.value)">
@@ -258,7 +259,7 @@
                     <div class="card-body">
                         <h5 class="card-title">DUPLA HAMBI</h5>
                         <p class="card-text">Dupla marhahúsos szezámmagos bundában.</p>
-                        <p class="ar text-center" id="duplahambi_">ÁR Ft</p>
+                        <p class="ar text-center" id="duplahambii_">ÁR Ft</p>
                     </div>
                 </div>
             </div>
@@ -299,8 +300,8 @@
                     </div>
                 </div>
             </div>
-                 
-                 <!-- Csirkés Chips Kártya -->
+
+            <!-- Csirkés Chips Kártya -->
             <div class="col-md-3 mb-4">
                 <div class="card" data-bs-toggle="modal" data-bs-target="#csirkéscsipszke"
                     onclick="csirkéscsipszkez.value = Number(csirkéscsipszke) * Number(csirkéscsipszke1.value)">
@@ -315,8 +316,8 @@
             </div>
 
             <!-- Csirkés Chips Modal -->
-            <div class="modal fade" id="csirkéscsipszke" tabindex="-1"
-                aria-labelledby="csirkéscsipszke_chipsLabel" aria-hidden="true">
+            <div class="modal fade" id="csirkéscsipszke" tabindex="-1" aria-labelledby="csirkéscsipszke_chipsLabel"
+                aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -345,7 +346,7 @@
                 </div>
             </div>
 
-    </div>
+        </div>
 
 
     </main>
@@ -414,21 +415,21 @@
     </script>
 
     <script>
-var Duplahambi = 500;
-var Csirkesszendvics = 750;
-var SajtosChips = 300;
-var SajtosPizza = 450;
-        
-function aktualis_ar() {
-   document.getElementById('duplahamburger_').innerHTML = Duplahambi + "Ft";
-   document.getElementById('csirkesszendvics_').innerHTML = Csirkesszendvics + " Ft";
-   document.getElementById('sajtoschips_').innerHTML = SajtosChips + " Ft";
-   document.getElementById('pizzafinom_').innerHTML = SajtosPizza + "Ft";
-}
+        var Csirkés_Szendvics = 750;
+        var Pizza_finom = 450;
+        var DuplaHamburger = 500;
+        var csirkéscsipszke = 300;
 
-function kosarba(termek, darab) {
-    localStorage.setItem(termek, darab);
-}
+        function aktualis_ar() {
+            document.getElementById('csirkesszendvics_').innerHTML = Csirkés_Szendvics + " Ft";
+            document.getElementById('pizzafinom_').innerHTML = Pizza_finom + "Ft";
+            document.getElementById('duplahambii_').innerHTML = DuplaHamburger + "Ft";
+            document.getElementById('csirkéscsipszke_').innerHTML = csirkéscsipszke + " Ft";
+        }
+
+        function kosarba(termek, darab) {
+            localStorage.setItem(termek, darab);
+        }
     </script>
 
     <!-- JavaScript links -->
