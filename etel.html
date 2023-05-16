@@ -139,7 +139,7 @@
 
         <div class="row">
             <div class="col-md-12 text-center">
-                <h2 class="mb-4">ÉTEL</h2>
+                <h2 class="mb-4">ÉTLAP</h2>
             </div>
         </div>
 
@@ -350,6 +350,160 @@
                 </div>
             </div>
 
+
+             <!--Mini Pizza Káryta -->
+             <div class="col-md-3 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#t005"
+                    onclick="minipizza.value = Number(Minipizza) * Number(db4.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/minipizza.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Mini pizza</h5>
+                        <p class="card-text">Egy átlagos mini pizza sonkával a tetején.</p>
+                        <p class="ar text-center" id="minipizza_">Ár Ft</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Mini Pizza Modal -->
+            <div class="modal fade" id="t005" tabindex="-1" aria-labelledby="t005Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="t005Label">Mini pizza</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <legend>feltétek:</legend>
+                                    <input type="checkbox" name="fel" id="Duplahambi_ketchup">
+                                    <label for="Duplahambi_ketchup">ketchup</label> <br>
+                                    <input type="checkbox" name="fel" id="Duplahambi_mustar">
+                                    <label for="Duplahambi_mustar">mustár</label> <br>
+                                    <input type="checkbox" name="fel" id="Duplahambi_majonez">
+                                    <label for="Duplahambi_majonez">majonéz</label> <br>
+                                    <hr>
+                                    <label for="db4">darab</label>
+                                    <input type="number" id="db4" name="fel" min="1" max="3" value="1"
+                                        onchange="minipizza.value = Number(Minipizza) * Number(db4.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="Minipizza">
+                                    <label for="minipizza"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('Minipizza',db4.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <!--Sült krumpli Káryta -->
+             <div class="col-md-3 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#t006"
+                    onclick="sultkrumpli.value = Number(Sultkrumpli) * Number(db4.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/19_sultkrumpli.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Sült krumpli</h5>
+                        <p class="card-text">Egy normális adag sült krumpli. Csak hogy hízzál.</p>
+                        <p class="ar text-center" id="sultkrumpli_">Ár Ft</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Sült krumpli Modal -->
+            <div class="modal fade" id="t006" tabindex="-1" aria-labelledby="t006Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="t006Label">Sült krumpli</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <legend>feltétek:</legend>
+                                    <input type="checkbox" name="fel" id="Duplahambi_ketchup">
+                                    <label for="Duplahambi_ketchup">ketchup</label> <br>
+                                    <input type="checkbox" name="fel" id="Duplahambi_mustar">
+                                    <label for="Duplahambi_mustar">mustár</label> <br>
+                                    <input type="checkbox" name="fel" id="Duplahambi_majonez">
+                                    <label for="Duplahambi_majonez">majonéz</label> <br>
+                                    <hr>
+                                    <label for="db4">darab</label>
+                                    <input type="number" id="db4" name="fel" min="1" max="3" value="1"
+                                        onchange="sultkrumpli.value = Number(Sultkrumpli) * Number(db4.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="sultkrumpli">
+                                    <label for="sultkrumpli"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('Sultkrumpli',db4.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <!--Francia pirítós Káryta -->
+             <div class="col-md-3 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#t007"
+                    onclick="sultkrumpli.value = Number(Sultkrumpli) * Number(db4.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/francia piritós.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Francia pirítós</h5>
+                        <p class="card-text">Frissen sütött Francia pirítós, sajttal a közepében.</p>
+                        <p class="ar text-center" id="franciapiritos_">Ár Ft</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Francia pirítós Modal -->
+            <div class="modal fade" id="t007" tabindex="-1" aria-labelledby="t007Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="t007Label">Sült krumpli</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <legend>feltétek:</legend>
+                                    <input type="checkbox" name="fel" id="Duplahambi_ketchup">
+                                    <label for="Duplahambi_ketchup">ketchup</label> <br>
+                                    <input type="checkbox" name="fel" id="Duplahambi_mustar">
+                                    <label for="Duplahambi_mustar">mustár</label> <br>
+                                    <input type="checkbox" name="fel" id="Duplahambi_majonez">
+                                    <label for="Duplahambi_majonez">majonéz</label> <br>
+                                    <hr>
+                                    <label for="db4">darab</label>
+                                    <input type="number" id="db4" name="fel" min="1" max="3" value="1"
+                                        onchange="franciapiritos.value = Number(Franciapiritos) * Number(db4.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="franciapiritos">
+                                    <label for="franciapiritos"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('Franciapiritos',db4.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="row etel">
                 <div class="col-md-12 text-center">
                     <h2 id="hotdogok" class="mb-4">HOTDOGOK</h2>
@@ -357,7 +511,7 @@
             </div>
 
             <div class="col-md-3 mb-4">
-                <div class="card" data-bs-toggle="modal" data-bs-target="#t005"
+                <div class="card" data-bs-toggle="modal" data-bs-target="#t008"
                     onclick="lyonihotdog.value = Number(Lyonihotdog) * Number(db5.value)">
                     <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/Lyoni hot dog.jpg"
                         class="card-img-top" alt="...">
@@ -370,11 +524,11 @@
             </div>
 
             <!--Lyoni hot dog Modal -->
-            <div class="modal fade" id="t005" tabindex="-1" aria-labelledby="t005Label" aria-hidden="true">
+            <div class="modal fade" id="t008" tabindex="-1" aria-labelledby="t008Label" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="t005Label">Lyoni hot dog</h1>
+                            <h1 class="modal-title fs-5" id="t008Label">Lyoni hot dog</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -410,7 +564,7 @@
 
 
             <div class="col-md-3 mb-4">
-                <div class="card"  data-bs-toggle="modal" data-bs-target="#t006"
+                <div class="card"  data-bs-toggle="modal" data-bs-target="#t009"
                     onclick="newyorkhotdog.value = Number(Newyorkhotdog) * Number(db6.value)">
                     <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/New York hot dog.jpg"
                         class="card-img-top" alt="...">
@@ -423,11 +577,11 @@
             </div>
 
             <!--Olaszos burger Modal -->
-            <div class="modal fade" id="t006" tabindex="-1" aria-labelledby="t006Label" aria-hidden="true">
+            <div class="modal fade" id="t009" tabindex="-1" aria-labelledby="t009Label" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="t006Label">New York hot dog</h1>
+                            <h1 class="modal-title fs-5" id="t009Label">New York hot dog</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -463,7 +617,7 @@
 
 
             <div class="col-md-3 mb-4">
-                <div class="card"  data-bs-toggle="modal" data-bs-target="#t007"
+                <div class="card"  data-bs-toggle="modal" data-bs-target="#t010"
                     onclick="amerikaihotdog.value = Number(Amerikaihotdog) * Number(db7.value)">
                     <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/Amerikai hot dog.png"
                         class="card-img-top" alt="...">
@@ -476,11 +630,11 @@
             </div>
 
             <!--Olaszos burger Modal -->
-            <div class="modal fade" id="t007" tabindex="-1" aria-labelledby="t007Label" aria-hidden="true">
+            <div class="modal fade" id="t010" tabindex="-1" aria-labelledby="t010Label" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="t007Label">Amerikai hot dog</h1>
+                            <h1 class="modal-title fs-5" id="t010Label">Amerikai hot dog</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -516,7 +670,7 @@
 
 
             <div class="col-md-3 mb-4">
-                <div class="card" data-bs-toggle="modal" data-bs-target="#t008"
+                <div class="card" data-bs-toggle="modal" data-bs-target="#t011"
                     onclick="simahotdog.value = Number(Simahotdog) * Number(db8.value)">
                     <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/hotdog.jpg"
                         class="card-img-top" alt="...">
@@ -530,11 +684,11 @@
         </div>
 
         <!--Olaszos burger Modal -->
-        <div class="modal fade" id="t008" tabindex="-1" aria-labelledby="t008Label" aria-hidden="true">
+        <div class="modal fade" id="t011" tabindex="-1" aria-labelledby="t011Label" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="t008Label">SIma hot dog</h1>
+                        <h1 class="modal-title fs-5" id="t011Label">SIma hot dog</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -580,7 +734,7 @@
 
         <div class="row" id="product-list2">
             <div class="col-md-3 mb-4">
-                <div class="card" data-bs-toggle="modal" data-bs-target="#t009"
+                <div class="card" data-bs-toggle="modal" data-bs-target="#t012"
                     onclick="csirkesszendvics.value = Number(Csirkesszendvics) * Number(db9.value)">
                     <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/hideg/csike_szendvics.jpg"
                         class="card-img-top" alt="...">
@@ -593,11 +747,11 @@
             </div>
 
             <!--Olaszos burger Modal -->
-        <div class="modal fade" id="t009" tabindex="-1" aria-labelledby="t009Label" aria-hidden="true">
+        <div class="modal fade" id="t012" tabindex="-1" aria-labelledby="t012Label" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="t009Label">Csirkés szendvics</h1>
+                        <h1 class="modal-title fs-5" id="t012Label">Csirkés szendvics</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -631,7 +785,7 @@
 
 
             <div class="col-md-3 mb-4">
-                <div class="card" data-bs-toggle="modal" data-bs-target="#t010" 
+                <div class="card" data-bs-toggle="modal" data-bs-target="#t013" 
                     onclick="vegaszendvics.value = Number(Vegaszendvics) * Number(db10.value)">
                     <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/hideg/szendvics.jpg"
                         class="card-img-top" alt="...">
@@ -644,11 +798,11 @@
             </div>
 
              <!--Olaszos burger Modal -->
-        <div class="modal fade" id="t010" tabindex="-1" aria-labelledby="t010Label" aria-hidden="true">
+        <div class="modal fade" id="t013" tabindex="-1" aria-labelledby="t013Label" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="t010Label">Vega szendvics</h1>
+                        <h1 class="modal-title fs-5" id="t013Label">Vega szendvics</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -682,24 +836,24 @@
 
 
             <div class="col-md-3 mb-4">
-                <div class="card" data-bs-toggle="modal" data-bs-target="#t011"
+                <div class="card" data-bs-toggle="modal" data-bs-target="#t014"
                     onclick="gyrosbagett.value = Number(Gyrosbagett) * Number(db11.value)">
                     <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/hideg/Gyrosbagett.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Gyros bagett</h5>
-                        <p class="card-text">Gyrossal, zöldséggel töltött bagett finomság</p>
+                        <p class="card-text">Főtt tojás hűtve, házi töltelékkel, meg kell kóstolni.</p>
                         <p class="ar text-center" id="gyrosbagett_">Ár Ft</p>
                     </div>
                 </div>
             </div>
 
                <!--Olaszos burger Modal -->
-        <div class="modal fade" id="t011" tabindex="-1" aria-labelledby="t011Label" aria-hidden="true">
+        <div class="modal fade" id="t014" tabindex="-1" aria-labelledby="t014Label" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="t011Label">Gyros bagett</h1>
+                        <h1 class="modal-title fs-5" id="t014Label">Gyros bagett</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -733,13 +887,13 @@
 
 
             <div class="col-md-3 mb-4">
-                <div class="card" data-bs-toggle="modal" data-bs-target="#t012"
+                <div class="card" data-bs-toggle="modal" data-bs-target="#t015"
                     onclick="royalbagett.value = Number(Royalbagett) * Number(db12.value)">
                     <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/hideg/Royalbagett.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Royal bagett</h5>
-                        <p class="card-text">Salátával hússal zöldséggel megtöltött ropogós bagett.!</p>
+                        <p class="card-text">Egy nagy szelet kenyér, jól megvajazva, hogy ne éhezz!</p>
                         <p class="ar text-center" id="royalbagett_">Ár Ft</p>
                     </div>
                 </div>
@@ -747,11 +901,11 @@
         </div>
 
               <!--Olaszos burger Modal -->
-              <div class="modal fade" id="t012" tabindex="-1" aria-labelledby="t012Label" aria-hidden="true">
+              <div class="modal fade" id="t015" tabindex="-1" aria-labelledby="t015Label" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="t012Label">Royal bagett</h1>
+                            <h1 class="modal-title fs-5" id="t015Label">Royal bagett</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -787,103 +941,6 @@
 
 
 
-        </div>
-     <div class="row etel">
-            <div class="col-md-12 text-center">
-                <h2 id="szendvicsek" class="mb-4">LEVESEK</h2>
-            </div>
-        </div>
-    <!-- Paradicsom leves  Kártya -->
-<div class="row" id="product-list1">
-    <div class="col-md-3 mb-4">
-        <div class="card" data-bs-toggle="modal" data-bs-target="#paradicsom"
-            onclick="paradicsom.value = Number(Paradicsomleves) * Number(dbparadicsom.value)">
-            <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/paradicsomleves.jfif"
-                class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">paradicsom leves</h5>
-                <p class="card-text"></p>
-                <p class="ar text-center" id="paradicsomleves_">ÁR Ft</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Paradicsom leves Modal -->
-    <div class="modal fade" id="paradicsom" tabindex="-1" aria-labelledby="paradicsomLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="paradicsomLabel">Sajtburger</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="javascript:void(0)">
-                        <fieldset>
-                            <label for="dbparadicsom">darab</label>
-                            <input type="number" name="fel" id="dbparadicsom" min="1" max="3" value="1"
-                                onchange="paradicsom.value = Number(Paradicsom) * Number(dbparadicsom.value)">
-                            <hr>
-                            <input style="background-color: aliceblue; width: 50px; text-align: center;"
-                                type="text" id="paradicsom">
-                            <label for="paradicsom"> Ft</label>
-                        </fieldset>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                        onclick="kosarba('Paradicsom',dbparadicsom.value)">HOZZÁADÁS</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-    <!-- Husleves Kártya -->
-    <div class="row" id="product-list1">
-        <div class="col-md-3 mb-4">
-            <div class="card" data-bs-toggle="modal" data-bs-target="#husleves"
-                onclick="husleves.value = Number(husleves) * Number(dbhusleves.value)">
-                <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/husleves.jfif"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Húsleves</h5>
-                    <p class="card-text"></p>
-                    <p class="ar text-center" id="husleves">ÁR Ft</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Husleves Modal -->
-        <div class="modal fade" id="husleves" tabindex="-1" aria-labelledby="huslevesLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="huslevesLabel">husleves</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="javascript:void(0)">
-                            <fieldset>
-                                
-                                <label for="dbhusleves">darab</label>
-                                <input type="number" name="fel" id="dbhusleves" min="1" max="3" value="1"
-                                    onchange="husleves.value = Number(Husleves) * Number(dbhusleves.value)">
-                                <hr>
-                                <input style="background-color: aliceblue; width: 50px; text-align: center;"
-                                    type="text" id="husleves">
-                                <label for="husleves"> Ft</label>
-                            </fieldset>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                            onclick="kosarba('husleves',dbhusleves.value)">HOZZÁADÁS</button>
-                    </div>
-                </div>
-            </div>
         </div>
 
 
