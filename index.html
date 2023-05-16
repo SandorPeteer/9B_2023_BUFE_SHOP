@@ -395,15 +395,114 @@
                     </div>
                 </div>
             </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+            <!--Sült krumpli Káryta -->
+            <div class="col-md-3 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#t006"
+                    onclick="sultkrumpli.value = Number(Sultkrumpli) * Number(db4.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/19_sultkrumpli.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Sült krumpli</h5>
+                        <p class="card-text">Egy normális adag sült krumpli. Csak hogy hízzál.</p>
+                        <p class="ar text-center" id="sultkrumpli_">Ár Ft</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Sült krumpli Modal -->
+            <div class="modal fade" id="t006" tabindex="-1" aria-labelledby="t006Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="t006Label">Sült krumpli</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <legend>feltétek:</legend>
+                                    <input type="checkbox" name="fel" id="Sültkrumpli_ketchup">
+                                    <label for="Sültkrumpli_ketchup">ketchup</label> <br>
+                                    <input type="checkbox" name="fel" id="Sültkrumpli_mustar">
+                                    <label for="Sültkrumpli_mustar">mustár</label> <br>
+                                    <input type="checkbox" name="fel" id="Sültkrumpli_majonez">
+                                    <label for="Sültkrumpli_majonez">majonéz</label> <br>
+                                    <hr>
+                                    <label for="db4">darab</label>
+                                    <input type="number" id="db4" name="fel" min="1" max="3" value="1"
+                                        onchange="sultkrumpli.value = Number(Sultkrumpli) * Number(db4.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="sultkrumpli">
+                                    <label for="sultkrumpli"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('Sultkrumpli',db4.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--AmerikaiHotdog-->
+            <div class="col-md-3 mb-4">
+                <div class="card"  data-bs-toggle="modal" data-bs-target="#t010"
+                    onclick="amerikaihotdog.value = Number(Amerikaihotdog) * Number(db7.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/Amerikai hot dog.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Amerikai hot dog</h5>
+                        <p class="card-text">Francia pirítós, melegszendvics.</p>
+                        <p class="ar text-center" id="amerikaihotdog_">Ár Ft</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Olaszos burger Modal -->
+            <div class="modal fade" id="t010" tabindex="-1" aria-labelledby="t010Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="t010Label">Amerikai hot dog</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <legend>feltétek:</legend>
+                                    <input type="checkbox" name="fel" id="Amerikaihotdog_ketchup">
+                                    <label for="Amerikaihotdog_ketchup">ketchup</label> <br>
+                                    <input type="checkbox" name="fel" id="Amerikaihotdog_mustar">
+                                    <label for="Amerikaihotdog_mustar">mustár</label> <br>
+                                    <input type="checkbox" name="fel" id="Amerikaihotdog_majonez">
+                                    <label for="Amerikaihotdog_majonez">majonéz</label> <br>
+                                    <input type="checkbox" name="fel" id="Amerikaihotdog_ketchup">
+                                    <label for="Amerikaihotdog_ketchup">Sajt</label> <br>
+                                    <hr>
+                                    <label for="db7">darab</label>
+                                    <input type="number" id="db7" name="fel" min="1" max="3" value="1"
+                                        onchange="amerikaihotdog.value = Number(Amerikaihotdog) * Number(db7.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="amerikaihotdog">
+                                    <label for="amerikaihotdog"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('Amerikaihotdog',db7.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
         </div>
 
 
@@ -443,7 +542,7 @@
                 </div>
             </div>
         </div>
-        
+
     </footer>
 
     <script>
@@ -479,6 +578,8 @@
         var Bbqhamburger = 500;
         var csirkéscsipszke = 300;
         var Xixoszilva = 350;
+        var Sultkrumpli = 400;
+        var Amerikaihotdog = 650;
 
         function aktualis_ar() {
             document.getElementById('csirkesszendvics_').innerHTML = Csirkés_Szendvics + " Ft";
@@ -486,6 +587,8 @@
             document.getElementById('bbqhamburger_').innerHTML = Bbqhamburger + "Ft";
             document.getElementById('csirkéscsipszke_').innerHTML = csirkéscsipszke + " Ft";
             document.getElementById('xixoszilva_').innerHTML = Xixoszilva + ("Ft");
+            document.getElementById('sultkrumpli_').innerHTML = Sultkrumpli + ("Ft");
+            document.getElementById('amerikaihotdog_').innerHTML = Amerikaihotdog + ("Ft");
         }
 
         function kosarba(termek, darab) {
