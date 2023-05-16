@@ -12,6 +12,8 @@ var Gyrosbagett = 800;
 var Royalbagett = 650;
 var MarsCsoki = 150;
 
+var SajtosChips = 300;
+
 function aktualis_ar() {
    document.getElementById('sajtburger_').innerHTML = Sajtburger + " Ft";
    document.getElementById('cheddar_').innerHTML = Cheddar + " Ft";
@@ -26,6 +28,8 @@ function aktualis_ar() {
    document.getElementById('gyrosbagett_').innerHTML = Gyrosbagett + " Ft";
    document.getElementById('royalbagett_').innerHTML = Royalbagett + " Ft";
    document.getElementById('mars_csokika_').innerHTML = MarsCsoki + " Ft";
+
+      document.getElementById('sajtoschips_').innerHTML = SajtosChips + " Ft";
 
 
 
