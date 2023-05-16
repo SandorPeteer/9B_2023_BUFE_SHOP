@@ -72,7 +72,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2 mt-lg-0" href="index.html">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/logo/logo1.png" height="50" alt="Logo" loading="lazy">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/logo/logo1.png" height="50"
+                        alt="Logo" loading="lazy">
                 </a>
                 <!-- Left links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -121,7 +122,8 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
                         <li>
-                            <a class="dropdown-item" href="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/bejelentkezes.html">Profilom</a>
+                            <a class="dropdown-item"
+                                href="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/bejelentkezes.html">Profilom</a>
                         </li>
                     </ul>
                 </div>
@@ -144,13 +146,12 @@
         </div>
 
 
-        
-        <!-- Rántotthús Kártya -->
+
         <div class="row" id="product-list1">
-            
-            
-            
-             <!-- Sajtos_chips Kártya -->
+
+
+
+            <!-- Sajtos_chips Kártya -->
             <div class="col-md-3 mb-4">
                 <div class="card" data-bs-toggle="modal" data-bs-target="#Balazs01"
                     onclick="sajtoschips.value = Number(SajtosChips) * Number(sajtoschipsdb.value)">
@@ -158,7 +159,7 @@
                         class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">SAJTOS CHIPS</h5>
-                        <p class="card-text">Sajtos chips valódi burgonyaszeletekből</p>
+                        <p class="card-text">valódi burgonyaszeletekből.</p>
                         <p class="ar text-center" id="sajtoschips_">ÁR Ft</p>
                     </div>
                 </div>
@@ -182,7 +183,8 @@
                                     <label for="Sajtos_chips_nagy">nagy</label> <br>
                                     <hr>
                                     <label for="sajtoschipsdb">darab</label>
-                                    <input type="number" name="Sajtos_chips" id="sajtoschipsdb" min="1" max="3" value="1"
+                                    <input type="number" name="Sajtos_chips" id="sajtoschipsdb" min="1" max="3"
+                                        value="1"
                                         onchange="sajtoschips.value = Number(SajtosChips) * Number(sajtoschipsdb.value)">
                                     <hr>
                                     <input style="background-color: aliceblue; width: 50px; text-align: center;"
@@ -198,211 +200,142 @@
                     </div>
                 </div>
             </div>
-            
-            
-            
-            
-            
+
+
+           
+            <!-- Csirkés Chips Kártya -->
             <div class="col-md-3 mb-4">
-                <div class="card" data-bs-toggle="modal" data-bs-target="#t001"
-                    onclick="rantotthusi.value = Number(Rántotthús) * Number(db1.value)">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/etel/meleg/rantotthus.webp"
+                <div class="card" data-bs-toggle="modal" data-bs-target="#csirkéscsipszke"
+                    onclick="csirkéscsipszkez.value = Number(csirkéscsipszke) * Number(csirkéscsipszke1.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/nasi/csirkés%20chips.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">RÁNTOTT HÚS</h5>
-                        <p class="card-text">Frissen, ropogósan sütve, pontosan ahogy szereted!</p>
-                        <p class="ar text-center" id="rantotthusi_">ÁR Ft</p>
+                        <h5 class="card-title">Csirkés Chips</h5>
+                        <p class="card-text">Karamellás mogyorós ízvilág.</p>
+                        <p class="ar text-center" id="csirkéscsipszke_">ÁR Ft</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Rántotthús Modal -->
-            <div class="modal fade" id="t001" tabindex="-1" aria-labelledby="t001Label" aria-hidden="true">
+            <!-- Csirkés Chips Modal -->
+            <div class="modal fade" id="csirkéscsipszke" tabindex="-1"
+                aria-labelledby="csirkéscsipszke_chipsLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="t001Label">Rántott hús</h1>
+                            <h1 class="modal-title fs-5" id="csirkéscsipszke_chipsLabel">Csirkés Chips</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <form action="javascript:void(0)">
                                 <fieldset>
-                                    <legend>feltétek:</legend>
-                                    <input type="checkbox" name="fel" id="Rántotthús_ketchup">
-                                    <label for="Rántotthús_ketchup">ketchup</label> <br>
-                                    <input type="checkbox" name="fel" id="Rántotthús_mustar">
-                                    <label for="Rántotthús_mustar">mustár</label> <br>
-                                    <input type="checkbox" name="fel" id="Rántotthús_majonez">
-                                    <label for="Rántotthús_majonez">majonéz</label> <br>
-                                    <hr>
-                                    <label for="db1">darab</label>
-                                    <input type="number" name="fel" id="db1" min="1" max="3" value="1"
-                                        onchange="rantotthusi.value = Number(Rántotthús) * Number(db1.value)">
+
+                                    <label for="csirkéscsipszke1">darab</label>
+                                    <input type="number" name="fel" id="csirkéscsipszke1" min="1" max="3" value="1"
+                                        onchange="csirkéscsipszkez.value = Number(csirkéscsipszke) * Number(csirkéscsipszke1.value)">
                                     <hr>
                                     <input style="background-color: aliceblue; width: 50px; text-align: center;"
-                                        type="text" id="rantotthusi">
-                                    <label for="rantotthusi"> Ft</label>
+                                        type="text" id="csirkéscsipszkez">
+                                    <label for="csirkéscsipszkez"> Ft</label>
                                 </fieldset>
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                                onclick="kosarba('Rántotthús',db1.value)">HOZZÁADÁS</button>
+                                onclick="kosarba('Csirkés Chips',csirkéscsipszke1.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mars Kártya -->
+            <div class="col-md-3 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#mars_csoki"
+                    onclick="mars_csokika.value = Number(Mars) * Number(csoki1.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/nasi/Mars.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Mars</h5>
+                        <p class="card-text">Karamellás mogyorós ízvilág.</p>
+                        <p class="ar text-center" id="mars_csokika_">ÁR Ft</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mars Modal -->
+            <div class="modal fade" id="mars_csoki" tabindex="-1" aria-labelledby="mars_csokiLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="mars_csokiLabel">Mars</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <label for="csoki1">darab</label>
+                                    <input type="number" name="fel" id="csoki1" min="1" max="3" value="1"
+                                        onchange="mars_csokika.value = Number(Mars) * Number(csoki1.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="mars_csokika">
+                                    <label for="mars_csokika"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('Mars',csoki1.value)">HOZZÁADÁS</button>
                         </div>
                     </div>
                 </div>
             </div>
 
 
-
-
-           
-
-            
-            <!-- Csirkés Chips Kártya -->
-<div class="row" id="product-list1">
-    <div class="col-md-3 mb-4">
-        <div class="card" data-bs-toggle="modal" data-bs-target="#csirkéscsipszke"
-            onclick="csirkéscsipszke.value = Number(Mars) * Number(csirkéscsipszke1.value)">
-            <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/nasi/csirkés%20chips.jpg"
-                class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Csirkés Chips</h5>
-                <p class="card-text">Karamellás mogyorós ízvilág.</p>
-                <p class="ar text-center" id="csirkéscsipszke_">ÁR Ft</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Csirkés Chips Modal -->
-    <div class="modal fade" id="csirkéscsipszke_chips" tabindex="-1" aria-labelledby="csirkéscsipszke_chipsLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="csirkéscsipszke_chipsLabel">Csirkés Chips</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="javascript:void(0)">
-                        <fieldset>
-                            
-                            <label for="csirkéscsipszke1
-            ">darab</label>
-                            <input type="number" name="fel" id="csirkéscsipszke1
-            " min="1" max="3" value="1"
-                                onchange="csirkéscsipszke.value = Number(CsirkésChips) * Number(csirkéscsipszke1
-                .value)">
-                            <hr>
-                            <input style="background-color: aliceblue; width: 50px; text-align: center;"
-                                type="text" id="csirkéscsipszke">
-                            <label for="csirkéscsipszke"> Ft</label>
-                        </fieldset>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                        onclick="kosarba('Csirkés Chips',csirkéscsipszke1
-        .value)">HOZZÁADÁS</button>
+            <!-- Kinder Bueno Kártya -->
+            <div class="col-md-3 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#bueno1"
+                    onclick="buenocska.value = Number(KinderBueno) * Number(kinder1.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/nasi/kinder%20boeno.jfif"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Kinder Bueno</h5>
+                        <p class="card-text">finom és most olcsó!</p>
+                        <p class="ar text-center" id="buenocska_">ÁR Ft</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-            
-<!-- Mars Kártya -->
-<div class="row" id="product-list1">
-    <div class="col-md-3 mb-4">
-        <div class="card" data-bs-toggle="modal" data-bs-target="#mars_csoki"
-            onclick="mars_csokika.value = Number(Mars) * Number(csoki1.value)">
-            <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/nasi/Mars.jpg"
-                class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Mars</h5>
-                <p class="card-text">Karamellás mogyorós ízvilág.</p>
-                <p class="ar text-center" id="mars_csokika_">ÁR Ft</p>
-            </div>
-        </div>
-    </div>
 
-    <!-- Mars Modal -->
-    <div class="modal fade" id="mars_csoki" tabindex="-1" aria-labelledby="mars_csokiLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="mars_csokiLabel">Mars</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="javascript:void(0)">
-                        <fieldset>
-                            
-                            <label for="csoki1
-            ">darab</label>
-                            <input type="number" name="fel" id="csoki1
-            " min="1" max="3" value="1"
-                                onchange="mars_csokika.value = Number(Mars) * Number(csoki1
-                .value)">
-                            <hr>
-                            <input style="background-color: aliceblue; width: 50px; text-align: center;"
-                                type="text" id="mars_csokika">
-                            <label for="mars_csokika"> Ft</label>
-                        </fieldset>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                        onclick="kosarba('Mars',csoki1
-        .value)">HOZZÁADÁS</button>
+            <!-- Kinder Bueno Modal -->
+            <div class="modal fade" id="bueno1" tabindex="-1" aria-labelledby="bueno1Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="bueno1Label">Kinder Bueno</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <br>
+                                    <hr>
+                                    <label for="kinder1">darab</label>
+                                    <input type="number" name="fel" id="kinder1" min="1" max="3" value="1"
+                                        onchange="buenocska.value = Number(KinderBueno) * Number(kinder1.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="buenocska">
+                                    <label for="buenocska"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('Kinder Bueno',kinder1.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-
-<!-- Kinder Bueno Kártya -->
-<div class="row" id="product-list1">
-    <div class="col-md-3 mb-4">
-        <div class="card" data-bs-toggle="modal" data-bs-target="#bueno1"
-            onclick="buenocska.value = Number(KinderBueno) * Number(kinder1.value)">
-            <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/nasi/kinder%20boeno.jfif"
-                class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Kinder Bueno</h5>
-                <p class="card-text"></p>
-                <p class="ar text-center" id="buenocska_">ÁR Ft</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Kinder Bueno Modal -->
-    <div class="modal fade" id="bueno1" tabindex="-1" aria-labelledby="bueno1Label" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="bueno1Label">Kinder Bueno</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="javascript:void(0)">
-                        <fieldset>
-                             <br>
-                            <hr>
-                            <label for="kinder1">darab</label>
-                            <input type="number" name="fel" id="kinder1" min="1" max="3" value="1"
-                                onchange="buenocska.value = Number(KinderBueno) * Number(kinder1.value)">
-                            <hr>
-                            <input style="background-color: aliceblue; width: 50px; text-align: center;"
-                                type="text" id="buenocska">
-                            <label for="buenocska"> Ft</label>
-                        </fieldset>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                        onclick="kosarba('Kinder Bueno',kinder1.value)">HOZZÁADÁS</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
         </div>
 
@@ -474,7 +407,28 @@
         });
     </script>
 
-    <script src="script.js"></script>
+    <script>
+        var SajtosChips = 550;
+        var csirkéscsipszke = 180;
+        var Mars = 234;
+        var KinderBueno = 325;
+
+        function aktualis_ar() {
+
+            document.getElementById('sajtoschips_').innerHTML = SajtosChips + " Ft";
+            document.getElementById('csirkéscsipszke_').innerHTML = SajtosChips + " Ft";
+            document.getElementById('mars_csokika_').innerHTML = Mars + " Ft";
+            document.getElementById('buenocska_').innerHTML = KinderBueno + " Ft";
+            
+            
+        }
+
+        function kosarba(termek, darab) {
+            localStorage.setItem(termek, darab);
+        }
+
+
+    </script>
 
     <!-- JavaScript links -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
