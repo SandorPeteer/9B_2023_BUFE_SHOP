@@ -11,6 +11,8 @@ var Vegaszendvics = 400;
 var Gyrosbagett = 800;
 var Royalbagett = 650;
 var MarsCsoki = 150;
+var Xixoszilva = 400;
+var Xixomango = 400;
 
 var SajtosChips = 300;
 
@@ -28,6 +30,8 @@ function aktualis_ar() {
    document.getElementById('gyrosbagett_').innerHTML = Gyrosbagett + " Ft";
    document.getElementById('royalbagett_').innerHTML = Royalbagett + " Ft";
    document.getElementById('mars_csokika_').innerHTML = MarsCsoki + " Ft";
+   document.getElementById('xixoszilva_').innerHTML = Xixoszilva + " Ft";
+   document.getElementById('xixomango_').innerHTML = Xixomango + " Ft";
 
       document.getElementById('sajtoschips_').innerHTML = SajtosChips + " Ft";
 
