@@ -164,7 +164,7 @@
                     <form class="needs-validation" novalidate>
                         <div class="row g-3">
                             <div class="col-sm-6">
-                                <label for="firstName" class="form-label">First name</label>
+                                <label for="firstName" class="form-label">Vezetéknév</label>
                                 <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
                                 <div class="invalid-feedback">
                                     Valid first name is required.
@@ -172,7 +172,7 @@
                             </div>
 
                             <div class="col-sm-6">
-                                <label for="lastName" class="form-label">Last name</label>
+                                <label for="lastName" class="form-label">Keresztnév</label>
                                 <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
                                 <div class="invalid-feedback">
                                     Valid last name is required.
@@ -180,7 +180,7 @@
                             </div>
 
                             <div class="col-12">
-                                <label for="username" class="form-label">Username</label>
+                                <label for="username" class="form-label">Profilnév</label>
                                 <div class="input-group has-validation">
                                     <span class="input-group-text">@</span>
                                     <input type="text" class="form-control" id="username" placeholder="Username"
@@ -193,16 +193,16 @@
 
                             <div class="col-12">
                                 <label for="email" class="form-label">Email <span
-                                        class="text-body-secondary">(Optional)</span></label>
-                                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                                        class="text-body-secondary">(Választható)</span></label>
+                                <input type="email" class="form-control" id="email" placeholder=Te@example.com">
                                 <div class="invalid-feedback">
                                     Please enter a valid email address for shipping updates.
                                 </div>
                             </div>
 
                             <div class="col-12">
-                                <label for="address" class="form-label">Address</label>
-                                <input type="text" class="form-control" id="address" placeholder="1234 Main St"
+                                <label for="address" class="form-label">Házszám</label>
+                                <input type="text" class="form-control" id="address" placeholder="XY utca 1"
                                     required>
                                 <div class="invalid-feedback">
                                     Please enter your shipping address.
@@ -210,16 +210,19 @@
                             </div>
 
                             <div class="col-12">
-                                <label for="address2" class="form-label">Address 2 <span
-                                        class="text-body-secondary">(Optional)</span></label>
+                                <label for="address2" class="form-label">Házszám 2<span
+                                        class="text-body-secondary">(Választható)</span></label>
                                 <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
                             </div>
 
                             <div class="col-md-5">
-                                <label for="country" class="form-label">Country</label>
-                                <select class="form-select" id="country" required>
+                                <label for="country" class="form-label">Ország</label>
+                                <select class="form-select" id="Ország" required>
                                     <option value="">Choose...</option>
-                                    <option>United States</option>
+                                    <option>Magyarország</option>
+                                    <option>Németország</option>
+                                    <option>Franciaország</option>                
+                                    <option>Lengyelország</option>                                 
                                 </select>
                                 <div class="invalid-feedback">
                                     Please select a valid country.
@@ -227,10 +230,20 @@
                             </div>
 
                             <div class="col-md-4">
-                                <label for="state" class="form-label">State</label>
+                                <label for="state" class="form-label">Vármegye</label>
                                 <select class="form-select" id="state" required>
-                                    <option value="">Choose...</option>
-                                    <option>California</option>
+                                    <option value="">Válassz...</option>
+                                    <option>Borsod-Abaúj-Zemplén Vármegye</option>
+                                    <option>Pest Vármegye</option>
+                                    <option>Szabolcs-Szatmár-Bereg Vármegye</option>
+                                    <option>Bács-Kiskun Vármegye</option>
+                                    <option>Heves Vármegye</option>
+                                    <option>Nógrád Vármegye</option>
+                                    <option>Hajdú-BiharVármegye</option>
+                                    <option>Jász-Nagykun-Szolnok Vármegye</option>
+                                    <option>Békés Vármegye</option>
+                                    <option>Veszprém Vármegye</option>
+                                    
                                 </select>
                                 <div class="invalid-feedback">
                                     Please provide a valid state.
@@ -256,7 +269,7 @@
 
                         <div class="form-check">
                             <input type="checkbox" class="form-check-input" id="save-info">
-                            <label class="form-check-label" for="save-info">Save this information for next time</label>
+                            <label class="form-check-label" for="save-info">Őrizd meg ezt az infőt későbre.</label>
                         </div>
 
                         <hr class="my-4">
@@ -267,11 +280,11 @@
                             <div class="form-check">
                                 <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked
                                     required>
-                                <label class="form-check-label" for="credit">Credit card</label>
+                                <label class="form-check-label" for="credit">Bank kártya</label>
                             </div>
                             <div class="form-check">
                                 <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
-                                <label class="form-check-label" for="debit">Debit card</label>
+                                <label class="form-check-label" for="debit">Számla</label>
                             </div>
                             <div class="form-check">
                                 <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
@@ -281,16 +294,16 @@
 
                         <div class="row gy-3">
                             <div class="col-md-6">
-                                <label for="cc-name" class="form-label">Name on card</label>
+                                <label for="cc-name" class="form-label">A Név a kártyán</label>
                                 <input type="text" class="form-control" id="cc-name" placeholder="" required>
-                                <small class="text-body-secondary">Full name as displayed on card</small>
+                                <small class="text-body-secondary">A teljes neved ami a kártyán szerepel.</small>
                                 <div class="invalid-feedback">
                                     Name on card is required
                                 </div>
                             </div>
 
                             <div class="col-md-6">
-                                <label for="cc-number" class="form-label">Credit card number</label>
+                                <label for="cc-number" class="form-label">Bankkártyaszám</label>
                                 <input type="text" class="form-control" id="cc-number" placeholder="" required>
                                 <div class="invalid-feedback">
                                     Credit card number is required
