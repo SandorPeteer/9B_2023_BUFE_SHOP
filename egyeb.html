@@ -84,7 +84,7 @@
                         <a class="nav-link" href="ital.html">ITAL</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="nasi.html">ITAL</a>
+                        <a class="nav-link" href="nasi.html">NASI</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="egyeb.html">EGYÉB</a>
@@ -137,7 +137,7 @@
 
     <main class="container py-5">
 
-        <!-- EGYÉBB csoport -->
+        <!--EGYÉB csoport -->
 
         <div class="row">
             <div class="col-md-12 text-center">
@@ -147,106 +147,419 @@
 
 
 
-        <div class="row" id="product-list">
+        <div class="row" id="product-list1">
+
+
+
+            <!--Cukor Kártya -->
             <div class="col-md-3 mb-4">
-                <div class="card">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#Balazs01"
+                    onclick="cukor.value = Number(Cukor) * Number(cukordb.value)">
                     <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/cukor.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Cukor</h5>
-                        <p class="card-text">Kristály cukor 2g</p>
-                        <p class="ar text-center">20 Ft</p>
+                        <p class="card-text">2g kristálycukor</p>
+                        <p class="ar text-center" id="cukor_">ÁR Ft</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 mb-4">
-                <div class="card">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/so.jpg" class="card-img-top"
-                        alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Só</h5>
-                        <p class="card-text">Tengeri só 2g</p>
-                        <p class="ar text-center">20 Ft</p>
+
+            <!--Cukor Modal -->
+            <div class="modal fade" id="Balazs01" tabindex="-1" aria-labelledby="Balazs01Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="Balazs01Label">Cukor</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <legend>méret:</legend>
+                                    <input type="radio" name="cukor" id="cukor_kicsi" checked>
+                                    <label for="cukor_kicsi">kicsi</label> <br>
+                                    <input type="radio" name="cukor" id="cukor_nagy">
+                                    <label for="cukor_nagy">nagy</label> <br>
+                                    <hr>
+                                    <label for="cukordb">darab</label>
+                                    <input type="number" name="cukor" id="cukordb" min="1" max="3"
+                                        value="1"
+                                        onchange="cukor.value = Number(Cukor) * Number(cukordb.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="cukor">
+                                    <label for="cukor"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('cukor',Cukordb.value)">HOZZÁADÁS</button>
+                        </div>
                     </div>
                 </div>
             </div>
+
+
+           
+            <!-- Só Kártya -->
             <div class="col-md-3 mb-4">
-                <div class="card">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/szivoszal.jpg"
+                <div class="card" data-bs-toggle="modal" data-bs-target="#Só"
+                    onclick="Sóz.value = Number(Só) * Number(Só1.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/so.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Szívószál</h5>
-                        <p class="card-text">Papír szívoszál</p>
-                        <p class="ar text-center">10 Ft</p>
+                        <h5 class="card-title">Só</h5>
+                        <p class="card-text">2g tengeri só</p>
+                        <p class="ar text-center" id="Só_">ÁR Ft</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Só Modal -->
+            <div class="modal fade" id="Só" tabindex="-1"
+                aria-labelledby="Só_chipsLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="Só_chipsLabel">Só</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+
+                                    <label for="Só1">darab</label>
+                                    <input type="number" name="fel" id="Só1" min="1" max="3" value="1"
+                                        onchange="Sóz.value = Number(Só) * Number(Só1.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="Sóz">
+                                    <label for="Sóz"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('Só',Só1.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- szivoszal Kártya -->
             <div class="col-md-3 mb-4">
-                <div class="card">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#szivoszal"
+                    onclick="szivoszalka.value = Number(Szivoszal) * Number(szivoszal1.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/szivoszal.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Szivoszal</h5>
+                        <p class="card-text">Papír szivoszal</p>
+                        <p class="ar text-center" id="szivoszal_">ÁR Ft</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- szivoszal Modal -->
+            <div class="modal fade" id="szivoszal" tabindex="-1" aria-labelledby="szivoszalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="szivoszalLabel">szivoszal</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <label for="szivoszal1">darab</label>
+                                    <input type="number" name="fel" id="szivoszal1" min="1" max="3" value="1"
+                                        onchange="szivoszalka.value = Number(Szivoszal) * Number(szivoszal1.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="szivoszalka">
+                                    <label for="szivoszalka"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('szivoszal',Szivoszal1.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- szalveta Kártya -->
+            <div class="col-md-3 mb-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#szalveta1"
+                    onclick="szalveta.value = Number(Szalveta) * Number(szalveta1.value)">
                     <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/szalveta.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Szalvéta</h5>
-                        <p class="card-text">1db papír szalvéta</p>
-                        <p class="ar text-center">Ingyen</p>
+                        <h5 class="card-title">Szalveta</h5>
+                        <p class="card-text">Papír szalveta</p>
+                        <p class="ar text-center" id="szalveta_">ÁR Ft</p>
                     </div>
                 </div>
             </div>
+
+            <!-- szalveta Modal -->
+            <div class="modal fade" id="szalveta1" tabindex="-1" aria-labelledby="szalveta1Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="szalveta1Label">szalveta</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <label for="szalveta1">darab</label>
+                                    <input type="number" name="fel" id="szalveta1" min="1" max="3" value="1"
+                                        onchange="szalveta.value = Number(Szalveta) * Number(szalveta1.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="szalveta">
+                                    <label for="szalveta"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('szalveta',szalveta1.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row" id="product-list1">
+
+            <!-- pohar Kártya -->
             <div class="col-md-3 mb-4">
-                <div class="card">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#pohar1"
+                    onclick="pohar.value = Number(Pohar) * Number(pohar1.value)">
                     <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/pohar.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Pohár</h5>
-                        <p class="card-text">Papír pohár 2dl</p>
-                        <p class="ar text-center">20 Ft</p>
+                        <p class="card-text">Papír pohár (2dl)</p>
+                        <p class="ar text-center" id="pohar_">ÁR Ft</p>
                     </div>
                 </div>
             </div>
+
+            <!-- pohar Modal -->
+            <div class="modal fade" id="pohar1" tabindex="-1" aria-labelledby="pohar1Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="pohar1Label">pohar</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+
+                                    <label for="pohar1">darab</label>
+                                    <input type="number" name="fel" id="pohar1" min="1" max="3" value="1"
+                                        onchange="pohar.value = Number(Pohar) * Number(pohar1.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="pohar">
+                                    <label for="pohar"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('pohar',pohar1.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- melegites Kártya -->
             <div class="col-md-3 mb-4">
-                <div class="card">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#melegites1"
+                    onclick="melegites.value = Number(melegites) * Number(melegites1.value)">
                     <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/melegites.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Melegítés</h5>
-                        <p class="card-text">Szendvics vagy étel melegítés</p>
-                        <p class="ar text-center">100 Ft</p>
+                        <p class="card-text">Mikrós, szendvics mel.</p>
+                        <p class="ar text-center" id="melegites_">ÁR Ft</p>
                     </div>
                 </div>
             </div>
+
+            <!-- melegites Modal -->
+            <div class="modal fade" id="melegites1" tabindex="-1" aria-labelledby="melegites1Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="melegites1Label">melegites</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <label for="melegites1">darab</label>
+                                    <input type="number" name="fel" id="melegites1" min="1" max="3" value="1"
+                                        onchange="melegites.value = Number(melegites) * Number(melegites1.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="melegites">
+                                    <label for="melegites"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('melegites',melegites1.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- kanal Kártya -->
             <div class="col-md-3 mb-4">
-                <div class="card">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#kanal1"
+                    onclick="kanal.value = Number(kanal) * Number(kanal1.value)">
                     <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/kanal.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Kanál</h5>
                         <p class="card-text">Műanyag kanál</p>
-                        <p class="ar text-center">10 Ft</p>
+                        <p class="ar text-center" id="kanal_">ÁR Ft</p>
                     </div>
                 </div>
             </div>
+
+            <!-- kanal Modal -->
+            <div class="modal fade" id="kanal1" tabindex="-1" aria-labelledby="kanal1Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="kanal1Label">kanal</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <label for="kanal1">darab</label>
+                                    <input type="number" name="fel" id="kanal1" min="1" max="3" value="1"
+                                        onchange="kanal.value = Number(kanal) * Number(kanal1.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="kanal">
+                                    <label for="kanal"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('kanal',kanal1.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- villa Kártya -->
             <div class="col-md-3 mb-4">
-                <div class="card">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#villa1"
+                    onclick="villa.value = Number(villa) * Number(villa1.value)">
                     <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/villa.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Villa</h5>
                         <p class="card-text">Műanyag villa</p>
-                        <p class="ar text-center">10 Ft</p>
+                        <p class="ar text-center" id="villa_">ÁR Ft</p>
                     </div>
                 </div>
             </div>
+
+            <!-- villa Modal -->
+            <div class="modal fade" id="villa1" tabindex="-1" aria-labelledby="villa1Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="villa1Label">villa</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <label for="villa1">darab</label>
+                                    <input type="number" name="fel" id="villa1" min="1" max="3" value="1"
+                                        onchange="villa.value = Number(villa) * Number(villa1.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="villa">
+                                    <label for="villa"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('villa',villa1.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row" id="product-list1">
+
+            <!-- kes Kártya -->
             <div class="col-md-3 mb-4">
-                <div class="card">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/kes.jpg" class="card-img-top"
-                        alt="...">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#kes1"
+                    onclick="kes.value = Number(kes) * Number(kes1.value)">
+                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/egyebb/kes.jpg"
+                        class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Kés</h5>
                         <p class="card-text">Műanyag kés</p>
-                        <p class="ar text-center">10 Ft</p>
+                        <p class="ar text-center" id="kes_">ÁR Ft</p>
                     </div>
                 </div>
             </div>
+
+            <!-- kes Modal -->
+            <div class="modal fade" id="kes1" tabindex="-1" aria-labelledby="kes1Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="kes1Label">kes</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0)">
+                                <fieldset>
+                                    <label for="kes1">darab</label>
+                                    <input type="number" name="fel" id="kes1" min="1" max="3" value="1"
+                                        onchange="kes.value = Number(kes) * Number(kes1.value)">
+                                    <hr>
+                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                        type="text" id="kes">
+                                    <label for="kes"> Ft</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="kosarba('kes',kes1.value)">HOZZÁADÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
 
@@ -317,7 +630,38 @@
         });
     </script>
 
-    <script src="script.js"></script>
+    <script>
+        var Cukor = 20;
+        var Só = 20;
+        var Szivoszal = 10;
+        var Szalveta = 5;
+        var Pohar = 20;
+        var Melegites = 100;
+        var Kanal = 10;
+        var Villa = 10;
+        var Kes = 10;
+
+        function aktualis_ar() {
+
+            document.getElementById('cukor_').innerHTML = Cukor + " Ft";
+            document.getElementById('Só_').innerHTML = Só + " Ft";
+            document.getElementById('szivoszal_').innerHTML = Szivoszal + " Ft";
+            document.getElementById('szalveta_').innerHTML = Szalveta + " Ft";
+            document.getElementById('pohar_').innerHTML = Pohar + " Ft";
+            document.getElementById('melegites_').innerHTML = Melegites + " Ft";
+            document.getElementById('kanal_').innerHTML = Kanal + " Ft";
+            document.getElementById('villa_').innerHTML = Villa + " Ft";
+            document.getElementById('kes_').innerHTML = Kes + " Ft";
+            
+            
+        }
+
+        function kosarba(termek, darab) {
+            localStorage.setItem(termek, darab);
+        }
+
+
+    </script>
 
     <!-- JavaScript links -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
