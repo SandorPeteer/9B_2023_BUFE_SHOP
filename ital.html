@@ -150,7 +150,7 @@
         <div class="row" id="product-list1">
 
 
-            <!--Szilvás xixo Káryta -->
+             <!--Szilvás xixo Káryta -->
             <div class="col-md-3 mb-4">
                 <div class="card" data-bs-toggle="modal" data-bs-target="#t003"
                     onclick="xixoszilva.value = Number(Xixoszilva) * Number(db14.value)">
@@ -159,11 +159,10 @@
                     <div class="card-body">
                         <h5 class="card-title">Szilvás xixo</h5>
                         <p class="card-text">Hűtött, szilvás izetésü xixo</p>
-                        <p class="ar text-center" id="xixoszilva_"> 400 Ft</p>
+                        <p class="ar text-center" id="xixoszilva_"> ÁR</p>
                     </div>
                 </div>
             </div>
-
 
             <!--Szilvás Xixo Modal -->
             <div class="modal fade" id="t003" tabindex="-1" aria-labelledby="t003Label" aria-hidden="true">
@@ -193,54 +192,59 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>  
 
-            <!--Mangos xixo Káryta -->
-            <div class="col-md-3 mb-4">
-                <div class="card" data-bs-toggle="modal" data-bs-target="#t004"
-                    onclick="xixomango.value = Number(Xixomango) * Number(db15.value)">
-                    <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/ital/hideg/xixofeketeribizli.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Feketeribizlis xixo</h5>
-                        <p class="card-text">Hűtött, Feketeribizlis izetésü xixo</p>
-                        <p class="ar text-center" id="xixomango_"> 400 Ft</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <!--Mangós Xixo Modal -->
-            <div class="modal fade" id="t004" tabindex="-1" aria-labelledby="t002Label" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="t004Label">Feketeribizlis xixo</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="javascript:void(0)">
-                                <fieldset>
-
-                                    <label for="db15">darab</label>
-                                    <input type="number" id="db15" name="fel" min="1" max="3" value="1"
-                                        onchange="xixomango.value = Number(Xixomango) * Number(db15.value)">
-                                    <hr>
-                                    <input style="background-color: aliceblue; width: 50px; text-align: center;"
-                                        type="text" id="xixomango">
-                                    <label for="xixomango"> Ft</label>
-                                </fieldset>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                                onclick="kosarba('Xixomango',db15.value)">HOZZÁADÁS</button>
+           <!--Feketeribizlis xixo Káryta -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#t004"
+                            onclick="xixomango.value = Number(Xixomango) * Number(db15.value)">
+                            <img src="https://sandorpeteer.github.io/9B_2023_BUFE_SHOP/img/ital/hideg/xixofeketeribizli.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Feketeribizlis xixo</h5>
+                                <p class="card-text">Hűtött, Feketeribizlis izetésü xixo</p>
+                                <p class="ar text-center" id="xixomango_"> </p>
+                            </div>
                         </div>
                     </div>
+        
+        
+        
+        
+        
+        
+        
+                   <!--Feketeribizlis xixo Xixo Modal -->
+                   <div class="modal fade" id="t004" tabindex="-1" aria-labelledby="t002Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="t004Label">Feketeribizlis xixo</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="javascript:void(0)">
+                                    <fieldset>
+                                       
+                                        <label for="db15">darab</label>
+                                        <input type="number" id="db15" name="fel" min="1" max="3" value="1"
+                                            onchange="xixomango.value = Number(Xixomango) * Number(db15.value)">
+                                        <hr>
+                                        <input style="background-color: aliceblue; width: 50px; text-align: center;"
+                                            type="text" id="xixomango">
+                                        <label for="xixomango"> Ft</label>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                    onclick="kosarba('Xixomango',db15.value)">HOZZÁADÁS</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-        </div>
+        
+                </div>
 
 
         <!-- ásványviz málna  Kártya -->
@@ -410,7 +414,28 @@
             });
         });
     </script>
+    
+    <script>
+        var Xixoszilva = 400;
+        var Xixomango = 400;
+        
+          function aktualis_ar() {
 
+            document.getElementById('xixoszilva_').innerHTML = Xixoszilva + " Ft";
+            document.getElementById('xixomango_').innerHTML = Xixomango + " Ft";
+       
+
+
+        }
+
+        function kosarba(termek, darab) {
+            localStorage.setItem(termek, darab);
+        }
+
+
+    </script>
+    
+    
     <script src="script.js"></script>
 
     <!-- JavaScript links -->
